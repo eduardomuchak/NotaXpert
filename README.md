@@ -27,6 +27,10 @@ Once this step is completed, push commits to your new repository.
 
 This template assumes you are using [Visual Studio Code](https://code.visualstudio.com/) as your code editor. If you do, then your code will be formatted accordignly whenever you save a file.
 
+### Note II
+
+We recommend using `yarn` as your package manager, and that, if you know what you are doing, you run `yarn upgrade-interactive --latest` after install dependencies for the first time. This will ensure you are using the latest versions of the tools used in this template. Then, you may pin your dependencies knowing you started with the latest version of all the tools and packages this template uses.
+
 ### Suggestions?
 
 Please open a Pull Request to suggest any improvements to this repository. Please justify your suggestion when making one. We will review all suggestions carefully.

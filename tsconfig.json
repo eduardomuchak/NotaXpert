@@ -1,40 +1,22 @@
 {
   "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["es6", "dom", "dom.iterable", "esnext"],
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "ESNEXT",
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
-    "baseUrl": ".",
-    "paths": {
-      "@components/*": ["./components/*"],
-      "@api/*": ["./api/*"],
-      "@models/*": ["./models/*"],
-      "@screens/*": ["./screens/*"],
-      "@hooks/*": ["./hooks/*"],
-      "@services/*": ["./services/*"],
-      "@constants": ["./constants.ts"],
-      "@context/*": ["./context/*"],
-      "@queries/*": ["./queries/*"],
-      "@data/*": ["./data/*"],
-      "@typeDefs/*": ["./types/*"],
-      "@generated/*": ["./generated/*"],
-      "@public/*": ["./public/*"],
-      "@utils/*": ["./utils/*"],
-      "@app/*": ["./app/*"],
-      "@assets/*": ["./assets/*"],
-      "@styles/*": ["./styles/*"]
-    },
-    "incremental": true
+    "incremental": true,
+    "baseUrl": "./src",
+    "strictPropertyInitialization": false
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx", "next-env.d.ts", "next.config.js"]
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
 }

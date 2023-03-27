@@ -1,5 +1,5 @@
 import { Task } from "domain/entities/Task";
-import { BoardUI } from "presentation/ui/BoardUI";
+import { BoardUI } from "presentation/ui/BoardUi";
 
 const Board = () => (
   <BoardUI

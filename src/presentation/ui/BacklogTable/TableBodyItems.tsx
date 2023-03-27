@@ -1,3 +1,5 @@
+import { Backlog } from "domain/entities/Backlog";
+
 export function TableBodyItems({
   vim,
   tipo,
@@ -8,7 +10,7 @@ export function TableBodyItems({
   vencimento,
   motivo,
   nome,
-}: any) {
+}: Backlog.BacklogContent) {
   return (
     <tr>
       <td className="border-2 px-4 py-2 bg-sanofiGray font-sanofiSansRegular text-black border-black">

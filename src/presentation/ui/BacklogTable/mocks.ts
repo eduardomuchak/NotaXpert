@@ -10,44 +10,6 @@ export const tableHeadItems = [
   "Nome",
 ];
 
-export const users = [
-  {
-    profile: "Administrador",
-    local: "BR 152 - Campinas",
-    name: "Rick Wright",
-    email: "alansilvamarq@sanofi.br",
-    Telefone: 21996060566,
-  },
-  {
-    profile: "Administrador",
-    local: "BR 152 - Campinas",
-    name: "Desirae Philips",
-    email: "alansilvamarq@sanofi.br",
-    Telefone: 21996060566,
-  },
-  {
-    profile: "Administrador",
-    local: "BR 152 - Campinas",
-    name: "Maria Vetrovs",
-    email: "alansilvamarq@sanofi.br",
-    Telefone: 21996060566,
-  },
-  {
-    profile: "Administrador",
-    local: "BR 152 - Campinas",
-    name: "Tatiana Septimus",
-    email: "alansilvamarq@sanofi.br",
-    Telefone: 21996060566,
-  },
-  {
-    profile: "Administrador",
-    local: "BR 152 - Campinas",
-    name: "Chance Septimus",
-    email: "alansilvamarq@sanofi.br",
-    Telefone: 21996060566,
-  },
-];
-
 export const nfs = [
   {
     vim: "123456789",

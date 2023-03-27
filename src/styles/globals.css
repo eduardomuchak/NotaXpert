@@ -1,3 +1,68 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'sanofiSansBold';
+  src: local('sanofiSansBold'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'sanofiSansBoldItalic';
+  src: local('sanofiSansBoldItalic'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-BoldItalic.ttf')
+      format('truetype');
+  font-weight: 700;
+  font-style: bold-italic;
+}
+
+@font-face {
+  font-family: 'sanofiSansItalic';
+  src: local('sanofiSansItalic'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'sanofiSansRegular';
+  src: local('sanofiSansRegular'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-Regular.ttf')
+      format('truetype');
+  font-weight: 400;
+  font-style: regular;
+}
+
+@font-face {
+  font-family: 'sanofiSansLight';
+  src: local('sanofiSansLight'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'sanofiSansLightItalic';
+  src: local('sanofiSansLightItalic'),
+    url('../assets/fonts/sans/WEB/TTF/SanofiSans-LightItalic.ttf')
+      format('truetype');
+  font-weight: 300;
+  font-style: light-italic;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dcdcdc;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #edf2f7;
+  border-radius: 5px;
+}

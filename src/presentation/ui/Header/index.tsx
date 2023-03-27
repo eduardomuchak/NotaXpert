@@ -85,7 +85,7 @@ export function Header() {
                 <div>
                   <Image
                     src={sanofiLogoLight}
-                    alt="Habits logo"
+                    alt="Sanofi logo"
                     className="h-12 w-auto"
                   />
                 </div>

@@ -5,6 +5,7 @@ import FilterTable from "presentation/ui/FilterTable";
 import { tableHeadItems } from "./mocks";
 import { nfs } from "./mocks";
 import { ButtonView } from "../ButtonView";
+import { KanbanView } from 'presentation/ui/KanbanView';
 // import { NotificationCard } from "../NotificationCard";
 
 export function BacklogTable() {
@@ -19,6 +20,7 @@ export function BacklogTable() {
           <TableHead headContent={tableHeadItems} />
           <TableBody backlog={nfs} />
         </table>
+        <KanbanView backlog={nfs} />
       </div>
       {/* <NotificationCard
         notification={{

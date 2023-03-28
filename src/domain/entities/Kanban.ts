@@ -1,9 +1,12 @@
+import { Backlog } from "domain/entities/Backlog";
+
 export namespace Kanban {
-    export interface CardProps {
-        urgency?: boolean;
-    }
     export interface ColumProps {
         title: string;
+        backlog: Backlog.BacklogContent[];
+    }
+    export interface BacklogKanbanProps {
+        backlog: Backlog.BacklogContent[];
     }
     
 }

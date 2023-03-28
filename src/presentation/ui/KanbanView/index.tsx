@@ -5,7 +5,7 @@ import { Kanban } from "domain/entities/Kanban";
 
 export function KanbanView(props: Kanban.BacklogKanbanProps) {
     return (
-        <div className="w-full overflow-x-scroll flex flex-row gap-6">
+        <div className="w-full flex flex-row gap-6">
             <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Backlog")} title="Backlog" />
             <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Em tratamento")} title="Em tratamento" />
             <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Com Solicitante")} title="Com Solicitante" />
@@ -17,9 +17,9 @@ export function KanbanView(props: Kanban.BacklogKanbanProps) {
 
 export function KanbanColumn(props: Kanban.ColumProps) {
     return (
-        <div className="flex flex-col w-64 min-h-40">
+        <div className="flex flex-col min-w-64 min-h-40">
             <div className={clsx(
-                'flex flex-row w-full justify-between min-h-40  text-white rounded-t-3xl py-2 px-6 text-md font-sanofiSansBold w-full',
+                'flex flex-row w-64 justify-between min-h-40  text-white rounded-t-3xl py-2 px-6 text-md font-sanofiSansBold w-full',
                 {
                     'bg-sanofiPurpleDark': props.title == "Backlog",
                     'bg-[#525CA3]': props.title == "Em tratamento",
@@ -32,7 +32,7 @@ export function KanbanColumn(props: Kanban.ColumProps) {
                 <text>{props.backlog.length}</text>
             </div>
             <div className={clsx(
-                'flex flex-col w-full min-h-40 bg-violet-300 rounded-b-3xl p-3 gap-3',
+                'flex flex-col w-64 min-h-40 bg-violet-300 rounded-b-3xl p-3 gap-3',
                 {
                     'bg-[#22004C4D]': props.title == "Backlog",
                     'bg-[#525CA34D]': props.title == "Em tratamento",

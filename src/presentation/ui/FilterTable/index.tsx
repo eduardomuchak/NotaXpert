@@ -12,7 +12,7 @@ import { Filter } from "domain/entities/Filter";
 export function FilterTable() {
 
   return (
-    <div className='flex flex-row pb-2 gap-3'>
+    <div className='flex flex-row pb-2 gap-3 w-full'>
       <SearchImput />
       <DropdownButton label='Tipo de doc' content={<Types />} />
       <DropdownButton label='Agentes' content={<Agents />} />

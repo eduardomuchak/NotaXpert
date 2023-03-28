@@ -41,15 +41,6 @@ export function BacklogTable() {
             <KanbanView backlog={nfs} />
           )}
       </div>
-      {/* <NotificationCard
-        notification={{
-          id: "549167",
-          title: "Vim está vencido há 15 dias",
-          isUrgent: true,
-          type: "NF",
-          date: "Notificação de 15/01/2023",
-        }}
-      /> */}
     </>
   );
 }

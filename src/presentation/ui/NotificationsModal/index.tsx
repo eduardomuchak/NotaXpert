@@ -1,33 +1,21 @@
-import React from "react";
-import { FaBell } from "react-icons/fa";
-
 import Image from "next/image";
 
-import warningIcon from "assets/images/warning-icon.svg";
-
-import { Notification } from "domain/entities/Notification";
-
-import {
-  HamburgerMenuIcon,
-  DotFilledIcon,
-  CheckIcon,
-  ChevronRightIcon,
-} from "@radix-ui/react-icons";
-
-import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 import { PageTitle } from "../PageTitle";
+import { Notification } from "domain/entities/Notification";
 import { NotificationsContainer } from "../NotificationsContainer";
 import { NotificationCard } from "../NotificationCard";
+import { FaBell } from "react-icons/fa";
+
+import warningIcon from "assets/images/warning-icon.svg";
+import notificationIcon from "assets/images/notification-button.svg";
+
+import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
 
 interface NotificationsModalProps {
   notifications: Notification[];
 }
 
 export function NotificationsModal(prop: NotificationsModalProps) {
-  const [bookmarksChecked, setBookmarksChecked] = React.useState(true);
-  const [urlsChecked, setUrlsChecked] = React.useState(false);
-  const [person, setPerson] = React.useState("pedro");
-
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
@@ -41,11 +29,11 @@ export function NotificationsModal(prop: NotificationsModalProps) {
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="bg-white w-[692px] p-[32px] mt-7 shadow-customShadow flex flex-col gap-8"
-          sideOffset={5}
+          className="bg-white w-[692px] p-[32px] shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll"
+          sideOffset={32}
         >
           <PageTitle>Notificações</PageTitle>
-          <div className="flex gap-2 items-center border border-sanofiSecondaryOrange rounded-full w-fit px-[8px] py-[4px]">
+          <div className="flex gap-2 items-center border-2 border-sanofiSecondaryOrange rounded-full w-fit px-[8px] py-[4px]">
             <Image src={warningIcon} alt="ícone de aviso importante" />
             <span className="text-sanofiSecondaryOrange">Urgentes</span>
           </div>
@@ -78,6 +66,12 @@ export function NotificationsModal(prop: NotificationsModalProps) {
               }}
             />
           </NotificationsContainer>
+          <button className="bg-sanofiPurpleDark flex items-center gap-2 rounded-full px-4 py-2 w-fit">
+            <Image src={notificationIcon} alt="ícone de um filtro" />
+            <span className="text-white">
+              Mostrar todos os VIMs com notificação
+            </span>
+          </button>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>

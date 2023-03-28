@@ -15,15 +15,6 @@ export function BacklogTable() {
           <TableBody backlog={nfs} />
         </table>
       </div>
-      {/* <NotificationCard
-        notification={{
-          id: "549167",
-          title: "Vim está vencido há 15 dias",
-          isUrgent: true,
-          type: "NF",
-          date: "Notificação de 15/01/2023",
-        }}
-      /> */}
     </>
   );
 }

@@ -8,7 +8,7 @@ export function NotificationsContainer({
   children,
 }: NotificationsContainerProps) {
   return (
-    <div className="rounded-[32px] bg-sanofiSecondaryOrange p-4 flex flex-col gap-4">
+    <div className="rounded-[32px] bg-sanofiLightOrange p-4 flex flex-col gap-4">
       {children}
     </div>
   );

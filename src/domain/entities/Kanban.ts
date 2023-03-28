@@ -5,7 +5,5 @@ export namespace Kanban {
     export interface ColumProps {
         title: string;
     }
-    export interface ButtonViewProps {
-        isBoard: boolean;
-    }
+    
 }

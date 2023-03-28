@@ -4,13 +4,17 @@ import FilterTable from "presentation/ui/FilterTable";
 
 import { tableHeadItems } from "./mocks";
 import { nfs } from "./mocks";
+import { ViewButton } from "../KanbanView";
 // import { NotificationCard } from "../NotificationCard";
 
 export function BacklogTable() {
   return (
     <>
       <div className="w-full overflow-x-scroll">
+        <div className="flex flex-row justify-between">
         <FilterTable />
+        <ViewButton isBoard={true} />
+        </div>
         <table className="w-full mb-2 bg-gray-100">
           <TableHead headContent={tableHeadItems} />
           <TableBody backlog={nfs} />

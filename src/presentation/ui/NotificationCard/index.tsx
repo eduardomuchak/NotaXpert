@@ -9,7 +9,7 @@ interface NotificationCardProps {
 
 export function NotificationCard(props: NotificationCardProps) {
   return (
-    <div className="font-sanofiSansRegular flex flex-col gap-2 border bg-white rounded-[32px] p-4 w-[564px]">
+    <div className="font-sanofiSansRegular flex flex-col gap-2 border bg-white rounded-[32px] p-4 w-full">
       <h3 className="font-bold">{props.notification.id}</h3>
       <h1 className="font-bold text-black text-3xl">
         {props.notification.title}

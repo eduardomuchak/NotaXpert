@@ -1,5 +1,6 @@
 import { TableBody } from "./TableBody";
 import { TableHead } from "./TableHead";
+import FilterTable from "presentation/ui/FilterTable";
 
 import { tableHeadItems } from "./mocks";
 import { nfs } from "./mocks";

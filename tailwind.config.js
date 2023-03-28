@@ -15,6 +15,7 @@ module.exports = {
         sanofiPurpleDark: '#22004C',
         sanofiPurple: '#7A01E6',
         sanofiGray: '#F4F2F7',
+        sanofiSecondaryOrange: '#CF483E',
         secondaryBlue: '#525CA3',
         secondaryRed: '#CF483E',
         secondaryPink: '#BE006B',

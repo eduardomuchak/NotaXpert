@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import { FaBell } from "react-icons/fa";
 import { BsList } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 import { Popover, Transition } from "@headlessui/react";

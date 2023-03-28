@@ -7,6 +7,7 @@ import { Popover, Transition } from '@headlessui/react';
 import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+import { NotificationsModal } from '../NotificationsModal';
 
 export function Header() {
   const pages = [
@@ -46,19 +47,14 @@ export function Header() {
             <Link
               key={`${index}${page.path}`}
               href={page.path}
-              className="text-2xl font-sanofiSansRegular hover:text-gray-300 transition-colors"
+              className="text-lg font-sanofiSansRegular hover:text-gray-300 transition-colors"
             >
               {page.name}
             </Link>
           ))}
         </nav>
         <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all">
-            <div className="relative">
-              <FaBell color={'#22004C'} size={24} />
-              <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-0 right-0" />
-            </div>
-          </div>
+          <NotificationsModal />
         </div>
       </div>
 

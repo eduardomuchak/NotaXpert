@@ -6,11 +6,11 @@ import { Kanban } from "domain/entities/Kanban";
 export function KanbanView(props: Kanban.BacklogKanbanProps) {
     return (
         <div className="w-full overflow-x-scroll flex flex-row gap-6">
-            <KanbanColumn backlog={props.backlog} title="Backlog" />
-            <KanbanColumn backlog={props.backlog} title="Em tratamento" />
-            <KanbanColumn backlog={props.backlog} title="Com Solicitante" />
-            <KanbanColumn backlog={props.backlog} title="Regras" />
-            <KanbanColumn backlog={props.backlog} title="Completo" />
+            <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Backlog")} title="Backlog" />
+            <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Em tratamento")} title="Em tratamento" />
+            <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Com Solicitante")} title="Com Solicitante" />
+            <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Regras")} title="Regras" />
+            <KanbanColumn backlog={props.backlog.filter((nf) => nf.status === "Completo")} title="Completo" />
         </div>
     );
 }
@@ -29,7 +29,7 @@ export function KanbanColumn(props: Kanban.ColumProps) {
                 },
             )}>
                 <h2>{props.title}</h2>
-                <text>X</text>
+                <text>{props.backlog.length}</text>
             </div>
             <div className={clsx(
                 'flex flex-col w-full min-h-40 bg-violet-300 rounded-b-3xl p-3 gap-3',

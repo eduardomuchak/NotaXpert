@@ -10,7 +10,6 @@ import warningIcon from "assets/images/warning-icon.svg";
 import notificationIcon from "assets/images/notification-button.svg";
 
 import * as DropdownMenu from "@radix-ui/react-dropdown-menu";
-
 interface NotificationsModalProps {
   notifications: Notification[];
 }
@@ -26,12 +25,8 @@ export function NotificationsModal(prop: NotificationsModalProps) {
           </div>
         </div>
       </DropdownMenu.Trigger>
-
       <DropdownMenu.Portal>
-        <DropdownMenu.Content
-          className="bg-white w-[692px] p-[32px] shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll"
-          sideOffset={32}
-        >
+        <DropdownMenu.Content className="bg-white w-[692px] p-[32px] shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll mt-[25px] md:mt-8">
           <PageTitle>Notificações</PageTitle>
           <div className="flex gap-2 items-center border-2 border-sanofiSecondaryOrange rounded-full w-fit px-[8px] py-[4px]">
             <Image src={warningIcon} alt="ícone de aviso importante" />

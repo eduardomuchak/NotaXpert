@@ -37,8 +37,9 @@ export function Header() {
             <Image src={sanofiLogoLight} alt="Sanofi logo" className="w-20" />
           </Link>
         </div>
-        <div className="-my-2 -mr-2 md:hidden">
-          <Popover.Button className="border border-violet-500 font-semibold rounded-lg p-2 flex items-center hover:bg-violet-600 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background">
+        <div className="-my-2 -mr-2 md:hidden flex gap-4">
+          <NotificationsModal />
+          <Popover.Button className="border border-violet-500 h-14 w-14 font-semibold rounded-2xl p-2 flex justify-center items-center hover:bg-violet-600 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background">
             <BsList className="h-6 w-6" aria-hidden="true" color="white" />
           </Popover.Button>
         </div>
@@ -82,7 +83,7 @@ export function Header() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center rounded-lg bg-violet-500 p-2 text-gray-300 hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-600">
+                  <Popover.Button className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-violet-500 p-2 text-gray-300 hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-600">
                     <AiOutlineClose
                       className="h-6 w-6"
                       aria-hidden="true"

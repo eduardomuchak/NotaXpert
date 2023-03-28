@@ -6,20 +6,8 @@ import {
   CheckIcon,
   MagnifyingGlassIcon
 } from '@radix-ui/react-icons';
+import { Filter } from "domain/entities/Filter";
 
-interface ButtonProps {
-  label: string;
-}
-
-interface DropdownMenuProps {
-  label: string;
-  content: JSX.Element;
-}
-
-interface CheckboxProps {
-  label: string;
-  sla?: boolean;
-}
 
 export function FilterTable() {
 
@@ -45,7 +33,7 @@ export function SearchImput() {
     </form>
   );
 }
-export function CheckboxSla(props: CheckboxProps) {
+export function CheckboxSla(props: Filter.CheckboxProps) {
   return (
     <form>
       <div className='flex flex-row justify-between aligin-start intens-baseline w-full '>
@@ -84,7 +72,7 @@ export function CheckboxSla(props: CheckboxProps) {
   );
 }
 
-export function CheckboxDemo(props: CheckboxProps) {
+export function CheckboxDemo(props: Filter.CheckboxProps) {
   return (
     <form>
       <div className='flex flex-row justify-between aligin-start intens-baseline w-full'>
@@ -182,7 +170,7 @@ export function Period() {
   );
 }
 
-export function ButtonFilter(props: ButtonProps) {
+export function ButtonFilter(props: Filter.ButtonProps) {
   return (
     <button className='items-center flex w-auto rounded-full bg-sanofiPurpleDark px-3 py-1 text-white text-sm font-sanofiSansRegular'>
       {props.label}
@@ -190,7 +178,7 @@ export function ButtonFilter(props: ButtonProps) {
   );
 }
 
-export function DropdownButton(props: DropdownMenuProps) {
+export function DropdownButton(props: Filter.DropdownMenuProps) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>

@@ -33,33 +33,18 @@ export function NotificationsModal(prop: NotificationsModalProps) {
             <span className="text-sanofiSecondaryOrange">Urgentes</span>
           </div>
           <NotificationsContainer>
-            <NotificationCard
-              notification={{
-                id: "549167",
-                title: "Vim está vencido há 15 dias",
-                isUrgent: true,
-                type: "NF",
-                date: "Notificação de 15/01/2023",
-              }}
-            />
-            <NotificationCard
-              notification={{
-                id: "549167",
-                title: "Vim está vencido há 15 dias",
-                isUrgent: true,
-                type: "NF",
-                date: "Notificação de 15/01/2023",
-              }}
-            />
-            <NotificationCard
-              notification={{
-                id: "549167",
-                title: "Vim está vencido há 15 dias",
-                isUrgent: true,
-                type: "NF",
-                date: "Notificação de 15/01/2023",
-              }}
-            />
+            {prop.notifications.map((notification, index) => (
+              <NotificationCard
+                notification={{
+                  id: notification.id,
+                  title: notification.title,
+                  isUrgent: notification.isUrgent,
+                  type: notification.type,
+                  date: notification.date,
+                }}
+                key={`${index}${notification.id}`}
+              />
+            ))}
           </NotificationsContainer>
           <button className="bg-sanofiPurpleDark flex items-center gap-2 rounded-full px-4 py-2 w-fit">
             <Image src={notificationIcon} alt="ícone de um filtro" />

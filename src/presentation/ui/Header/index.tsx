@@ -1,31 +1,55 @@
-import { Fragment } from 'react';
-import { FaBell } from 'react-icons/fa';
-import { BsList } from 'react-icons/bs';
-import { AiOutlineClose } from 'react-icons/ai';
-import { Popover, Transition } from '@headlessui/react';
+import { Fragment } from "react";
+import { FaBell } from "react-icons/fa";
+import { BsList } from "react-icons/bs";
+import { AiOutlineClose } from "react-icons/ai";
+import { Popover, Transition } from "@headlessui/react";
 
-import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
-import Image from 'next/image';
-import Link from 'next/link';
-import { NotificationsModal } from '../NotificationsModal';
+import sanofiLogoLight from "assets/images/sanofi-logo-light.svg";
+import Image from "next/image";
+import Link from "next/link";
+import { NotificationsModal } from "../NotificationsModal";
 
 export function Header() {
   const pages = [
     {
-      name: 'Board',
-      path: '/',
+      name: "Board",
+      path: "/",
     },
     {
-      name: 'Estatísticas',
-      path: '/estatisticas',
+      name: "Estatísticas",
+      path: "/estatisticas",
     },
     {
-      name: 'Upload de Backlog',
-      path: '/upload',
+      name: "Upload de Backlog",
+      path: "/upload",
     },
     {
-      name: 'Configurações',
-      path: '/configuracoes',
+      name: "Configurações",
+      path: "/configuracoes",
+    },
+  ];
+
+  const notificationsMock = [
+    {
+      id: "549167",
+      title: "VIM está vencido a 15 dias",
+      isUrgent: true,
+      type: "NF",
+      date: "Notificação de 15/01/2023",
+    },
+    {
+      id: "549168",
+      title: "VIM está vencido a 15 dias",
+      isUrgent: true,
+      type: "NF",
+      date: "Notificação de 15/01/2023",
+    },
+    {
+      id: "549169",
+      title: "VIM está vencido a 15 dias",
+      isUrgent: true,
+      type: "NF",
+      date: "Notificação de 15/01/2023",
     },
   ];
 
@@ -38,7 +62,7 @@ export function Header() {
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden flex gap-4">
-          <NotificationsModal />
+          <NotificationsModal notifications={notificationsMock} />
           <Popover.Button className="border border-violet-500 h-14 w-14 font-semibold rounded-2xl p-2 flex justify-center items-center hover:bg-violet-600 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background">
             <BsList className="h-6 w-6" aria-hidden="true" color="white" />
           </Popover.Button>
@@ -48,14 +72,14 @@ export function Header() {
             <Link
               key={`${index}${page.path}`}
               href={page.path}
-              className="text-lg font-sanofiSansRegular hover:text-gray-300 transition-colors"
+              className="text-md lg:text-2xl font-sanofiSansRegular hover:text-gray-300 transition-colors"
             >
               {page.name}
             </Link>
           ))}
         </nav>
         <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-          <NotificationsModal />
+          <NotificationsModal notifications={notificationsMock} />
         </div>
       </div>
 
@@ -87,7 +111,7 @@ export function Header() {
                     <AiOutlineClose
                       className="h-6 w-6"
                       aria-hidden="true"
-                      color={'white'}
+                      color={"white"}
                     />
                   </Popover.Button>
                 </div>

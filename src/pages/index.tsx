@@ -1,13 +1,16 @@
-import type { NextPage } from "next";
-import BacklogTable from "presentation/ui/BacklogTable";
-import { Header } from "presentation/ui/Header";
+import type { NextPage } from 'next';
+import BacklogTable from 'presentation/ui/BacklogTable';
+import { Header } from 'presentation/ui/Header';
+import { PageContainer } from 'presentation/ui/PageContainer';
+import { PageTitle } from 'presentation/ui/PageTitle';
 
 const Home: NextPage = () => (
   <>
     <Header />
-    <div className="p-10 flex w-screen flex-col">
+    <PageContainer>
+      <PageTitle>Board</PageTitle>
       <BacklogTable />
-    </div>
+    </PageContainer>
   </>
 );
 

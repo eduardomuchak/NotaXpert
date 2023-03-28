@@ -30,14 +30,10 @@ export function Header() {
 
   return (
     <Popover className="relative bg-sanofiPurpleDark p-8">
-      <div className="flex items-center justify-between md:justify-start md:space-x-10">
-        <div className="flex justify-start lg:w-0 lg:flex-1">
+      <div className="flex items-center gap-[42px] flex-1 justify-between">
+        <div className="flex justify-start">
           <Link href="/">
-            <Image
-              src={sanofiLogoLight}
-              alt="Sanofi logo"
-              className="h-12 w-auto"
-            />
+            <Image src={sanofiLogoLight} alt="Sanofi logo" className="w-20" />
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden">
@@ -45,7 +41,7 @@ export function Header() {
             <BsList className="h-6 w-6" aria-hidden="true" color="white" />
           </Popover.Button>
         </div>
-        <nav className="hidden space-x-10 md:flex text-white">
+        <nav className="hidden gap-[42px] md:flex text-white items-start">
           {pages.map((page, index) => (
             <Link
               key={`${index}${page.path}`}
@@ -86,7 +82,7 @@ export function Header() {
                   <Image
                     src={sanofiLogoLight}
                     alt="Sanofi logo"
-                    className="h-12 w-auto"
+                    className="w-20"
                   />
                 </div>
                 <div className="-mr-2">

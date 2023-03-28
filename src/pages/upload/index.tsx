@@ -1,12 +1,14 @@
 import { Header } from 'presentation/ui/Header';
+import { PageContainer } from 'presentation/ui/PageContainer';
+import { PageTitle } from 'presentation/ui/PageTitle';
 
 export default function Upload() {
   return (
     <>
       <Header />
-      <div className="flex flex-col items-center justify-center h-screen">
-        <h1 className="text-6xl font-bold">Upload de Backlog</h1>
-      </div>
+      <PageContainer>
+        <PageTitle isCentered>Upload de Backlog</PageTitle>
+      </PageContainer>
     </>
   );
 }

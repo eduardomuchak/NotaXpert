@@ -1,5 +1,6 @@
 import { TableBody } from "./TableBody";
 import { TableHead } from "./TableHead";
+import FilterTable from "presentation/ui/FilterTable";
 
 import { tableHeadItems } from "./mocks";
 import { nfs } from "./mocks";
@@ -7,6 +8,7 @@ import { nfs } from "./mocks";
 export function BacklogTable() {
   return (
     <div className="w-full overflow-x-scroll">
+      <FilterTable />
       <table className="w-full mb-2 bg-gray-100">
         <TableHead headContent={tableHeadItems} />
         <TableBody backlog={nfs} />

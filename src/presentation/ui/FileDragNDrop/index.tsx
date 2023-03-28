@@ -1,18 +1,32 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 import Dropzone from 'react-dropzone';
 import cloudIcon from 'assets/images/cloud-icon.svg';
 import Image from 'next/image';
 
 export function FileDragNDrop() {
   const [file, setFile] = useState<any>(null);
-  const handleChange = (file: any) => {
-    setFile(file);
-  };
 
-  const fileTypes = ['XML', 'CSV', 'XLSX'];
+  console.log('file', file);
+
+  const onDrop = useCallback((acceptedFiles: File[]) => {
+    console.log('Teste', acceptedFiles[0].name);
+    acceptedFiles.forEach((file: File) => {
+      const reader = new FileReader();
+
+      reader.onabort = () => console.log('file reading was aborted');
+      reader.onerror = () => console.log('file reading has failed');
+      reader.onload = () => {
+        // Do whatever you want with the file contents
+        const binaryStr = reader.result;
+        console.log(binaryStr);
+      };
+      setFile(acceptedFiles[0]);
+      reader.readAsArrayBuffer(file);
+    });
+  }, []);
 
   return (
-    <Dropzone onDrop={(acceptedFiles) => console.log(acceptedFiles)}>
+    <Dropzone onDrop={onDrop}>
       {({ getRootProps, getInputProps }) => (
         <section>
           <div

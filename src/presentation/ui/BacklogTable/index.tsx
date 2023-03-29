@@ -7,7 +7,6 @@ import { nfs } from "./mocks";
 import { ButtonView } from "../ButtonView";
 import { KanbanView } from 'presentation/ui/KanbanView';
 import create from 'zustand';
-import { useEffect, useRef, useState } from "react";
 // import { NotificationCard } from "../NotificationCard";
 
 type MyStoreType = {
@@ -40,7 +39,7 @@ export function BacklogTable() {
           )
           :
           (
-            <KanbanView backlog={nfs} />
+            <KanbanView kanbanData={{backlog:nfs}} />
           )}
       </div>
     </>

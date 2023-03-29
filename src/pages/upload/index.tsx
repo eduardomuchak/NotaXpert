@@ -1,14 +1,12 @@
-import { Header } from 'presentation/ui/Header';
+import { FileDropzone } from 'presentation/ui/FileDropzone';
 import { PageContainer } from 'presentation/ui/PageContainer';
 import { PageTitle } from 'presentation/ui/PageTitle';
 
 export default function Upload() {
   return (
-    <>
-      <Header />
-      <PageContainer>
-        <PageTitle isCentered>Upload de Backlog</PageTitle>
-      </PageContainer>
-    </>
+    <PageContainer>
+      <PageTitle isCentered>Upload de Backlog</PageTitle>
+      <FileDropzone />
+    </PageContainer>
   );
 }

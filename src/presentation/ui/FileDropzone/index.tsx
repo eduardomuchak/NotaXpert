@@ -3,7 +3,7 @@ import Dropzone from 'react-dropzone';
 import cloudIcon from 'assets/images/cloud-icon.svg';
 import Image from 'next/image';
 
-export function FileDragNDrop() {
+export function FileDropzone() {
   const [file, setFile] = useState<any>(null);
 
   console.log('file', file);
@@ -31,7 +31,7 @@ export function FileDragNDrop() {
         <section>
           <div
             {...getRootProps()}
-            className="bg-sanofiViolet w-full max-w-[1200px] mx-auto mt-16 rounded-[64px] h-[304px] flex flex-col items-center justify-center p-10 gap-4"
+            className="bg-sanofiViolet w-full max-w-[1200px] mx-auto mt-16 rounded-[64px] h-[304px] flex flex-col items-center justify-center p-10 gap-4 hover:cursor-pointer"
           >
             <input {...getInputProps()} />
             <Image

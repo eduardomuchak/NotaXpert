@@ -27,13 +27,9 @@ export function NotificationsModal(prop: NotificationsModalProps) {
 
   return (
     <DropdownMenu.Root open={open} onOpenChange={setOpen}>
-      <DropdownMenu.Trigger asChild>
-        <div className="h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all">
-          <div className="relative">
-            <FaBell color={'#22004C'} size={24} />
-            <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-0 right-0" />
-          </div>
-        </div>
+      <DropdownMenu.Trigger className="relative h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all">
+        <FaBell color={'#22004C'} size={24} />
+        <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-0 right-0" />
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         {transitions((style, item) =>

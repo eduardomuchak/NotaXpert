@@ -25,8 +25,10 @@ export function BacklogTable() {
   return (
     <>
       <div className="w-full overflow-x-scroll">
-        <div className='flex flex-row justify-between w-full}'>
-          <FilterTable />
+        <div className='flex flex-wrap-reverse justify-between w-full}'>
+          <div>
+            <FilterTable />
+          </div>
           <ButtonView isBoard={true} />
         </div>
         {isButtonPressed == false ?

@@ -4,7 +4,7 @@ import { useMyStore } from 'presentation/ui/BacklogTable';
 export function ButtonView(props: ButtonViewProps) {
     const { isButtonPressed, toggleButton } = useMyStore();
     return (
-        <div>
+        <div className="flex pb-2">
             {isButtonPressed == true ?
                 <button onClick={toggleButton} className='items-center flex w-auto rounded-full bg-sanofiPurpleDark px-3 py-1 text-white text-sm font-sanofiSans h-fit gap-1'>
                     <svg width="12" height="12" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">

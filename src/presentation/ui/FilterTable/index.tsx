@@ -12,7 +12,7 @@ import { Filter } from "domain/entities/Filter";
 export function FilterTable() {
 
   return (
-    <div className='flex flex-row pb-2 gap-3'>
+    <div className='flex flex-row pb-2 gap-3 w-full pb-2'>
       <SearchImput />
       <DropdownButton label='Tipo de doc' content={<Types />} />
       <DropdownButton label='Agentes' content={<Agents />} />
@@ -182,7 +182,7 @@ export function DropdownButton(props: Filter.DropdownMenuProps) {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className='items-center flex w-auto border-2 rounded-full border-sanofiPurpleDark border-solid gap-2 px-3 py-1 text-gray-500' aria-label='Tipos de doc select'>
+        <button className='items-center flex flex-row min-w-fit max-h-fit border-2 rounded-full border-sanofiPurpleDark border-solid gap-2 px-3 py-1 text-gray-500' aria-label='Tipos de doc select'>
           <text className='text-xs font-bold font-sanofiSansRegular'>{props.label}</text>
           <TriangleDownIcon />
         </button>

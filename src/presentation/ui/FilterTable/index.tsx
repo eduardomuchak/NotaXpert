@@ -154,12 +154,12 @@ export function Period() {
           </Slider.Root>
         </form>
         <div className='flex flex-row justify-between text-xs font-sanofiSansRegular'>
-          <text>01</text>
-          <text>07</text>
-          <text>15</text>
-          <text>30</text>
-          <text>60</text>
-          <text>90+</text>
+          <p>01</p>
+          <p>07</p>
+          <p>15</p>
+          <p>30</p>
+          <p>60</p>
+          <p>90+</p>
         </div>
       </div>
       <DropdownMenu.DropdownMenuLabel className='text-xs font-bold font-sanofiSansRegular text-violet-900'>
@@ -183,7 +183,7 @@ export function DropdownButton(props: Filter.DropdownMenuProps) {
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
         <button className='items-center flex flex-row min-w-fit max-h-fit border-2 rounded-full border-sanofiPurpleDark border-solid gap-2 px-3 py-1 text-gray-500' aria-label='Tipos de doc select'>
-          <text className='text-xs font-bold font-sanofiSansRegular'>{props.label}</text>
+          <p className='text-xs font-bold font-sanofiSansRegular'>{props.label}</p>
           <TriangleDownIcon />
         </button>
       </DropdownMenu.Trigger>

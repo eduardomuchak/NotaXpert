@@ -31,7 +31,7 @@ export default function Login() {
   return (
     <div className="h-screen w-screen bg-sanofiGray flex items-center justify-center">
       <form
-        className="w-full max-w-[480px] flex flex-col  px-10 py-12 bg-white rounded-[32px]"
+        className="w-full max-w-[540px] flex flex-col px-12 py-14 bg-white rounded-[32px]"
         onSubmit={handleSubmit}
         autoComplete="off"
       >

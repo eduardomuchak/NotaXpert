@@ -18,3 +18,15 @@ export async function signinRequest(data: SigninRequestData) {
     },
   };
 }
+
+
+export async function recoverUserInformation() {
+  await delay();
+
+  return {
+    user: {
+      name: "John Doe",
+      email: "johndoe@email.com.br",
+    },
+  };
+}

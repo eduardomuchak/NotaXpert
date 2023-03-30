@@ -34,7 +34,6 @@ export default function Login() {
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const signin = useAuthStore((state) => state.signin);
-  const user = useAuthStore((state) => state.user);
 
   const handleEmail = (event: ChangeEvent<HTMLInputElement>) => {
     setEmail(event.target.value);
@@ -47,7 +46,6 @@ export default function Login() {
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     await signin(email, password);
-    console.log(user);
   }
 
   return (

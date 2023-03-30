@@ -6,6 +6,7 @@ import logo from 'assets/images/sanofi-logo.svg';
 import { Button } from 'presentation/ui/Button';
 import { useAuthStore } from 'store/auth';
 import { ToggleEyePassword } from 'presentation/ui/ToggleEyePassword';
+import Link from 'next/link';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -63,9 +64,12 @@ export default function Login() {
             onChange={(event) => handlePassword(event)}
           />
         </div>
-        <span className="flex self-end my-4 font-sanofiSansRegular text-sm">
+        <Link
+          href="/recuperar-senha"
+          className="flex self-end my-4 font-sanofiSansRegular text-sm hover:underline"
+        >
           Esqueceu a senha?
-        </span>
+        </Link>
         <Button variant="primary" type="submit">
           Entrar
         </Button>

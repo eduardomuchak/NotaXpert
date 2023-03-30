@@ -1,9 +1,11 @@
 import React, { ChangeEvent, useState } from 'react';
-import Image from 'next/image';
-import { Input } from 'presentation/ui/Input';
 
-import logo from 'assets/images/sanofi-logo.svg';
+import { Input } from 'presentation/ui/Input';
 import { Button } from 'presentation/ui/Button';
+import { useRouter } from 'next/router';
+
+import Image from 'next/image';
+import logo from 'assets/images/sanofi-logo.svg';
 
 export default function RecuperarSenha() {
   const [email, setEmail] = useState('');
@@ -17,6 +19,8 @@ export default function RecuperarSenha() {
     setEmail(event.target.value);
   };
 
+  const router = useRouter();
+
   return (
     <div className="h-screen w-full bg-sanofiGray flex items-center justify-center">
       <form
@@ -26,7 +30,8 @@ export default function RecuperarSenha() {
         <Image
           src={logo}
           alt={'Sanofi Logo'}
-          className="w-full max-w-[300px] mb-10 mx-auto"
+          className="w-full max-w-[300px] mb-10 mx-auto hover:cursor-pointer"
+          onClick={() => router.push('/login')}
         />
         <h1 className="font-sanofiSansBold text-4xl text-center text-sanofiBlue mb-6">
           Recuperar Senha

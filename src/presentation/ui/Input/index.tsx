@@ -37,7 +37,7 @@ export function Input({
         {...rest}
       />
       {icon ? (
-        <button className="absolute top-8 right-5 transform -translate-y-1/2 focus:outline-none">
+        <button className="absolute top-7 right-5 transform -translate-y-1/2 focus:outline-none">
           {icon}
         </button>
       ) : null}

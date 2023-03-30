@@ -7,11 +7,10 @@ interface KanbanColumnProps {
 }
 
 export function KanbanColumn(props: KanbanColumnProps) {
-    console.log(props.content.backlog);
     return (
         <div className="flex flex-col min-w-64 min-h-40">
             <div className={clsx(
-                'flex flex-row w-64 justify-between min-h-40  text-white rounded-t-3xl py-2 px-6 text-md font-sanofiSansBold w-full',
+                'flex flex-row justify-between min-h-40  text-white rounded-t-3xl py-2 px-6 text-md font-sanofiSansBold w-full',
                 {
                     'bg-sanofiPurpleDark': props.content.title == "Backlog",
                     'bg-[#525CA3]': props.content.title == "Em tratamento",

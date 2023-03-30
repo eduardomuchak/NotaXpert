@@ -1,10 +1,16 @@
 import { create } from "zustand";
-import { signinRequest, SigninRequestData } from "../services/auth";
-import { setCookie } from "nookies";
+import {
+  signinRequest,
+  SigninRequestData,
+  recoverUserInformation,
+} from "../services/auth";
+import { setCookie, parseCookies } from "nookies";
+
+import Router from "next/router";
+import { api } from "services/api";
 
 type AuthState = {
   isAuthenticated: boolean;
-  setIsAuthenticated: any;
   signin: any;
   user: User | null;
 };
@@ -18,11 +24,26 @@ export const useAuthStore = create<AuthState>((set) => ({
   user: null,
 
   isAuthenticated: false,
-  setIsAuthenticated: () =>
-    set((state) => ({ isAuthenticated: !state.isAuthenticated })),
 
   signin: async ({ email, password }: SigninRequestData) => {
-    const { token, user } = await signinRequest({ email, password });
-    setCookie(undefined, "token", token, {});
+    const { token } = await signinRequest({ email, password });
+
+    setCookie(undefined, "sanofi-token", token, {
+      maxAge: 60 * 60 * 1, // 1 hour
+    });
+
+    api.defaults.headers["Authorization"] = `Bearer ${token}`;
+
+    const cookies = parseCookies();
+
+    const sanofiToken = cookies["sanofi-token"];
+
+    if (sanofiToken) {
+      recoverUserInformation().then((response) => {
+        set({ user: response.user, isAuthenticated: true });
+      });
+    }
+
+    Router.push("/");
   },
 }));

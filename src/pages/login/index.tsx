@@ -42,11 +42,11 @@ export default function Login() {
 
   return (
     <div className="h-screen w-screen bg-sanofiGray flex items-center justify-center">
-      <form className="w-full max-w-[480px] flex flex-col  p-10">
+      <form className="w-full max-w-[480px] flex flex-col  px-10 py-12 bg-white rounded-[32px]">
         <Image
           src={logo}
           alt={'Sanofi Logo'}
-          className="w-full max-w-[300px] mb-7 mx-auto"
+          className="w-full max-w-[300px] mb-10 mx-auto"
         />
         <div className="flex flex-col gap-6 w-full">
           <Input

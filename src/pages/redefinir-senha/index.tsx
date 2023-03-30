@@ -5,16 +5,21 @@ import { Input } from 'presentation/ui/Input';
 import logo from 'assets/images/sanofi-logo.svg';
 import { Button } from 'presentation/ui/Button';
 
-export default function RecuperarSenha() {
-  const [email, setEmail] = useState('');
+export default function RedefinirSenha() {
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(email);
   }
 
-  const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setEmail(event.target.value);
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (event.target.name === 'password') {
+      setPassword(event.target.value);
+    }
+    if (event.target.name === 'confirmPassword') {
+      setConfirmPassword(event.target.value);
+    }
   };
 
   return (
@@ -29,23 +34,26 @@ export default function RecuperarSenha() {
           className="w-full max-w-[300px] mb-10 mx-auto"
         />
         <h1 className="font-sanofiSansBold text-4xl text-center text-sanofiBlue mb-6">
-          Recuperar Senha
+          Redefinir Senha
         </h1>
         <div className="flex flex-col gap-6">
-          <h2 className="font-sanofiSansRegular text-2xl text-center text-sanofiBlue">
-            Você receberá um link para redefinir a sua senha
-          </h2>
-
           <Input
-            label="Email"
-            id="email"
-            type="email"
-            value={email}
-            onChange={handleEmailChange}
+            label="Nova senha"
+            id="password"
+            type="password"
+            value={password}
+            onChange={handleChange}
+          />
+          <Input
+            label="Confirme a nova senha"
+            id="confirmPassword"
+            type="password"
+            value={confirmPassword}
+            onChange={handleChange}
           />
 
           <Button variant="primary" type="submit">
-            Recuperar senha
+            Redefinir senha
           </Button>
         </div>
       </form>

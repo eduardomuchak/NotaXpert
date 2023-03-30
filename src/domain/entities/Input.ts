@@ -4,5 +4,6 @@ export namespace CustomInput {
     label: string;
     id: string;
     value: string;
+    icon?: React.ReactNode;
   }
 }

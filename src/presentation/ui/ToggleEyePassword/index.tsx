@@ -1,17 +1,18 @@
 import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai';
 
+interface Props {
+  isPasswordVisible: boolean;
+  setIsPasswordVisible: (isPasswordVisible: boolean) => void;
+  onClick: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+
 export function ToggleEyePassword({
   isPasswordVisible,
   setIsPasswordVisible,
-}: {
-  isPasswordVisible: boolean;
-  setIsPasswordVisible: (isPasswordVisible: boolean) => void;
-}) {
+  onClick,
+}: Props) {
   return (
-    <div
-      className="bg-white"
-      onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-    >
+    <div className="bg-white" onClick={onClick}>
       {isPasswordVisible ? (
         <AiFillEye size={24} />
       ) : (
@@ -20,3 +21,4 @@ export function ToggleEyePassword({
     </div>
   );
 }
+

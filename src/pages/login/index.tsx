@@ -1,16 +1,16 @@
-import React, { ChangeEvent, useState } from 'react';
-import Image from 'next/image';
-import { Input } from 'presentation/ui/Input';
+import React, { ChangeEvent, useState } from "react";
+import Image from "next/image";
+import { Input } from "presentation/ui/Input";
 
-import logo from 'assets/images/sanofi-logo.svg';
-import { Button } from 'presentation/ui/Button';
-import { useAuthStore } from 'store/auth';
-import { ToggleEyePassword } from 'presentation/ui/ToggleEyePassword';
-import Link from 'next/link';
+import logo from "assets/images/sanofi-logo.svg";
+import { Button } from "presentation/ui/Button";
+import { useAuthStore } from "store/auth";
+import { ToggleEyePassword } from "presentation/ui/ToggleEyePassword";
+import Link from "next/link";
 
 export default function Login() {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const signin = useAuthStore((state) => state.signin);
@@ -37,7 +37,7 @@ export default function Login() {
       >
         <Image
           src={logo}
-          alt={'Sanofi Logo'}
+          alt={"Sanofi Logo"}
           className="w-full max-w-[300px] mb-10 mx-auto"
         />
         <div className="flex flex-col gap-6 w-full">
@@ -53,11 +53,15 @@ export default function Login() {
               <ToggleEyePassword
                 isPasswordVisible={isPasswordVisible}
                 setIsPasswordVisible={setIsPasswordVisible}
+                onClick={(event) => {
+                  event.preventDefault();
+                  setIsPasswordVisible(!isPasswordVisible);
+                }}
               />
             }
             label="Password"
             id="password"
-            type={isPasswordVisible ? 'text' : 'password'}
+            type={isPasswordVisible ? "text" : "password"}
             value={password}
             onChange={(event) => handlePassword(event)}
           />

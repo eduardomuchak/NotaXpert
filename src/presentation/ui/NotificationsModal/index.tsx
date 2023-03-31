@@ -35,8 +35,10 @@ export function NotificationsModal(prop: NotificationsModalProps) {
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>
-              <DropdownMenu.Content className="bg-white w-[692px] p-[32px] shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll mt-[25px] md:mt-8">
-                <PageTitle>Notificações</PageTitle>
+              <DropdownMenu.Content className="bg-white w-min md:w-full md:max-w-2xl p-4 md:p-8  shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll mt-6 md:mt-8">
+                <div className="min-w-[300px]">
+                  <PageTitle>Notificações</PageTitle>
+                </div>
                 <div className="flex gap-2 items-center border-2 border-sanofiSecondaryOrange rounded-full w-fit px-[8px] py-[4px]">
                   <Image src={warningIcon} alt="ícone de aviso importante" />
                   <span className="text-sanofiSecondaryOrange">Urgentes</span>

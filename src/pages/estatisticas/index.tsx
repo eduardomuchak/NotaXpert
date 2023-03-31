@@ -1,10 +1,12 @@
-import { PageContainer } from 'presentation/ui/PageContainer';
-import { PageTitle } from 'presentation/ui/PageTitle';
+import { PageContainer } from "presentation/ui/PageContainer";
+import { PageTitle } from "presentation/ui/PageTitle";
+import { withAuth } from "security/withAuth";
 
-export default function Estatisticas() {
+function Estatisticas() {
   return (
     <PageContainer>
       <PageTitle>Estatísticas</PageTitle>
     </PageContainer>
   );
 }
+export default withAuth(Estatisticas);

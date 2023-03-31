@@ -1,12 +1,11 @@
-import type { GetServerSideProps, NextPage } from "next";
+import type { NextPage } from 'next';
 
-import { PageContainer } from "presentation/ui/PageContainer";
-import { PageTitle } from "presentation/ui/PageTitle";
-import { parseCookies } from "nookies";
-import { getApiClient } from "services/axios";
-import { withAuth } from "security/withAuth";
+import { PageContainer } from 'presentation/ui/PageContainer';
+import { PageTitle } from 'presentation/ui/PageTitle';
 
-import BacklogTable from "presentation/ui/BacklogTable";
+import { withAuth } from 'security/withAuth';
+
+import BacklogTable from 'presentation/ui/BacklogTable';
 
 const Home: NextPage = () => {
   return (
@@ -18,24 +17,3 @@ const Home: NextPage = () => {
 };
 
 export default withAuth(Home);
-
-// export const getServerSideProps: GetServerSideProps = async (ctx) => {
-//   const apiClient = getApiClient(ctx);
-//   const cookies = parseCookies(ctx);
-//   const sanofiToken = cookies["sanofi-token"];
-
-//   if (!sanofiToken) {
-//     return {
-//       redirect: {
-//         destination: "/login",
-//         permanent: false,
-//       },
-//     };
-//   }
-
-//   // await apiClient.get("/users");
-
-//   return {
-//     props: {},
-//   };
-// };

@@ -1,10 +1,10 @@
-import {  NextPage, NextPageContext } from "next";
-import { parseCookies } from "nookies";
-import Router from "next/router";
+import { NextPage, NextPageContext } from 'next';
+import { parseCookies } from 'nookies';
+import Router from 'next/router';
 
 export const withAuth = (
-  WrappedComponent: NextPage<NextPage>,
-  protectedRoute: boolean = true
+  WrappedComponent: NextPage,
+  protectedRoute: boolean = true,
 ) => {
   const Wrapper = (props: any) => {
     return <WrappedComponent {...props} />;
@@ -13,16 +13,16 @@ export const withAuth = (
   Wrapper.getInitialProps = async (ctx: NextPageContext) => {
     const { res } = ctx;
     const cookies = parseCookies(ctx);
-    const sanofiToken = cookies["sanofi-token"];
+    const sanofiToken = cookies['sanofi-token'];
 
     if (!sanofiToken && protectedRoute) {
       if (res) {
         res.writeHead(302, {
-          Location: "/login",
+          Location: '/login',
         });
         res.end();
       } else {
-        Router.push("/login");
+        Router.push('/login');
       }
     }
 

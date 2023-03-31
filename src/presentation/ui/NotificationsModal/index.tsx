@@ -29,14 +29,16 @@ export function NotificationsModal(prop: NotificationsModalProps) {
     <DropdownMenu.Root open={open} onOpenChange={setOpen}>
       <DropdownMenu.Trigger className="relative h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all">
         <FaBell color={'#22004C'} size={24} />
-        <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-0 right-0" />
+        <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-4 right-4" />
       </DropdownMenu.Trigger>
       <DropdownMenu.Portal>
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>
-              <DropdownMenu.Content className="bg-white w-[692px] p-[32px] shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll mt-[25px] md:mt-8">
-                <PageTitle>Notificações</PageTitle>
+              <DropdownMenu.Content className="bg-white w-min md:w-full md:max-w-2xl p-4 md:p-8  shadow-customShadow flex flex-col gap-8 h-[86vh] overflow-y-scroll mt-6 md:mt-8">
+                <div className="min-w-[300px]">
+                  <PageTitle>Notificações</PageTitle>
+                </div>
                 <div className="flex gap-2 items-center border-2 border-sanofiSecondaryOrange rounded-full w-fit px-[8px] py-[4px]">
                   <Image src={warningIcon} alt="ícone de aviso importante" />
                   <span className="text-sanofiSecondaryOrange">Urgentes</span>

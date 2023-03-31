@@ -1,54 +1,54 @@
-import { Fragment } from "react";
-import { BsList } from "react-icons/bs";
-import { AiOutlineClose } from "react-icons/ai";
-import { Popover, Transition } from "@headlessui/react";
+import { Fragment } from 'react';
+import { BsList } from 'react-icons/bs';
+import { AiOutlineClose } from 'react-icons/ai';
+import { Popover, Transition } from '@headlessui/react';
 
-import sanofiLogoLight from "assets/images/sanofi-logo-light.svg";
-import Image from "next/image";
-import Link from "next/link";
-import { NotificationsModal } from "../NotificationsModal";
+import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
+import Image from 'next/image';
+import Link from 'next/link';
+import { NotificationsModal } from '../NotificationsModal';
 
 export function Header() {
   const pages = [
     {
-      name: "Board",
-      path: "/",
+      name: 'Board',
+      path: '/',
     },
     {
-      name: "Estatísticas",
-      path: "/estatisticas",
+      name: 'Estatísticas',
+      path: '/estatisticas',
     },
     {
-      name: "Upload de Backlog",
-      path: "/upload",
+      name: 'Upload de Backlog',
+      path: '/upload',
     },
     {
-      name: "Configurações",
-      path: "/configuracoes",
+      name: 'Configurações',
+      path: '/configuracoes',
     },
   ];
 
   const notificationsMock = [
     {
-      id: "549167",
-      title: "VIM está vencido a 15 dias",
+      id: '549167',
+      title: 'VIM está vencido a 15 dias',
       isUrgent: true,
-      type: "NF",
-      date: "Notificação de 15/01/2023",
+      type: 'NF',
+      date: 'Notificação de 15/01/2023',
     },
     {
-      id: "549168",
-      title: "VIM está vencido a 15 dias",
+      id: '549168',
+      title: 'VIM está vencido a 15 dias',
       isUrgent: true,
-      type: "NF",
-      date: "Notificação de 15/01/2023",
+      type: 'NF',
+      date: 'Notificação de 15/01/2023',
     },
     {
-      id: "549169",
-      title: "VIM está vencido a 15 dias",
+      id: '549169',
+      title: 'VIM está vencido a 15 dias',
       isUrgent: true,
-      type: "NF",
-      date: "Notificação de 15/01/2023",
+      type: 'NF',
+      date: 'Notificação de 15/01/2023',
     },
   ];
 
@@ -110,7 +110,7 @@ export function Header() {
                     <AiOutlineClose
                       className="h-6 w-6"
                       aria-hidden="true"
-                      color={"white"}
+                      color={'white'}
                     />
                   </Popover.Button>
                 </div>

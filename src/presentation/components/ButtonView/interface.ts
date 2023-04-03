@@ -1,3 +1,3 @@
 export interface ButtonViewProps {
-    isBoard: boolean;
+  isBoard: boolean;
 }

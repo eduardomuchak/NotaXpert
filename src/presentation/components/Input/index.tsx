@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import { CustomInput } from 'domain/entities/Input';
 
 import clsx from 'clsx';
+import { CustomInput } from './interface';
 
 export function Input({
   label,

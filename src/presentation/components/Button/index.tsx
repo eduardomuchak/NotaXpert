@@ -1,5 +1,5 @@
-import { CustomButton } from 'domain/entities/Button';
 import clsx from 'clsx';
+import { CustomButton } from './interface';
 
 export function Button({
   children,

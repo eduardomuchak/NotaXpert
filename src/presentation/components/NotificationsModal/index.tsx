@@ -11,7 +11,7 @@ import notificationIcon from 'assets/images/notification-button.svg';
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useState } from 'react';
-import { PageTitle } from '../PageTitle';
+import { PageTitle } from '../ui/PageUi/PageTitle';
 interface NotificationsModalProps {
   notifications: Notification[];
 }

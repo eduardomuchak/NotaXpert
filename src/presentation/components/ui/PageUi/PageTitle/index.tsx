@@ -1,5 +1,5 @@
-import { PageConfig } from 'domain/entities/PageConfig';
 import clsx from 'clsx';
+import { PageConfig } from '../interface';
 
 export function PageTitle({ children, isCentered }: PageConfig.TitleProps) {
   return (

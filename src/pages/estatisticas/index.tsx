@@ -1,5 +1,5 @@
-import { PageContainer } from 'presentation/components/PageContainer';
-import { PageTitle } from 'presentation/components/PageTitle';
+import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
+import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
 import { withAuth } from 'security/withAuth';
 
 function Estatisticas() {

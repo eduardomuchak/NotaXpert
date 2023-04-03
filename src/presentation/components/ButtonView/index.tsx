@@ -1,5 +1,5 @@
-import { ButtonViewProps } from 'domain/entities/ButtonView';
 import { useMyStore } from 'presentation/components/BacklogTable';
+import { ButtonViewProps } from './interface';
 
 export function ButtonView(props: ButtonViewProps) {
   const { isButtonPressed, toggleButton } = useMyStore();

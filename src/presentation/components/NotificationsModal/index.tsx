@@ -12,6 +12,7 @@ import notificationIcon from 'assets/images/notification-button.svg';
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useState } from 'react';
 import { PageTitle } from '../ui/PageUi/PageTitle';
+import { focusStyles } from 'styles/focus';
 interface NotificationsModalProps {
   notifications: Notification[];
 }
@@ -27,7 +28,9 @@ export function NotificationsModal(prop: NotificationsModalProps) {
 
   return (
     <DropdownMenu.Root open={open} onOpenChange={setOpen}>
-      <DropdownMenu.Trigger className="relative h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all">
+      <DropdownMenu.Trigger
+        className={`relative h-14 w-14 bg-white rounded-2xl flex items-center justify-center cursor-pointer hover:brightness-90 transition-all ${focusStyles}`}
+      >
         <FaBell color={'#22004C'} size={24} />
         <div className="absolute bg-secondaryPink w-3 h-3 rounded-full top-4 right-4" />
       </DropdownMenu.Trigger>

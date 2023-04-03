@@ -9,8 +9,8 @@ export namespace Notification {
 }
 
 export class Notification {
-  public id: Notification.CardContent["id"];
-  public title: Notification.CardContent["title"];
+  public id: string;
+  public title: string;
   public isUrgent: Notification.CardContent["isUrgent"];
   public type: Notification.CardContent["type"];
   public date: Notification.CardContent["date"];

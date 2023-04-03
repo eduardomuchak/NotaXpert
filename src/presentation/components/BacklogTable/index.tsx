@@ -1,12 +1,12 @@
 import { TableBody } from './TableBody';
 import { TableHead } from './TableHead';
-import FilterTable from 'presentation/ui/FilterTable';
+import FilterTable from 'presentation/components/FilterTable';
 
 import { tableHeadItems } from './mocks';
 import { nfs } from './mocks';
 import { ButtonView } from '../ButtonView';
-import { KanbanView } from 'presentation/ui/KanbanView';
-import create from 'zustand';
+import { KanbanView } from 'presentation/components/KanbanView';
+import { create } from 'zustand';
 // import { NotificationCard } from "../NotificationCard";
 
 type MyStoreType = {

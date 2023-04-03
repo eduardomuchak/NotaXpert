@@ -1,11 +1,11 @@
 import type { NextPage } from 'next';
 
-import { PageContainer } from 'presentation/ui/PageContainer';
-import { PageTitle } from 'presentation/ui/PageTitle';
+import { PageContainer } from 'presentation/components/PageContainer';
+import { PageTitle } from 'presentation/components/PageTitle';
 
 import { withAuth } from 'security/withAuth';
 
-import BacklogTable from 'presentation/ui/BacklogTable';
+import BacklogTable from 'presentation/components/BacklogTable';
 
 const Home: NextPage = () => {
   return (

@@ -1,7 +1,7 @@
 import { Task } from 'domain/entities/Task';
-import { BoardUI } from 'presentation/ui/BoardUi';
-import { PageContainer } from 'presentation/ui/PageContainer';
-import { PageTitle } from 'presentation/ui/PageTitle';
+import { BoardUI } from 'presentation/components/ui/BoardUi';
+import { PageContainer } from 'presentation/components/PageContainer';
+import { PageTitle } from 'presentation/components/PageTitle';
 
 const Board = () => (
   <PageContainer>

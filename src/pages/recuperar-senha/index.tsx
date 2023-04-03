@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useState } from 'react';
 
-import { Input } from 'presentation/ui/Input';
-import { Button } from 'presentation/ui/Button';
+import { Input } from 'presentation/components/Input';
+import { Button } from 'presentation/components/Button';
 import { useRouter } from 'next/router';
 
 import Image from 'next/image';

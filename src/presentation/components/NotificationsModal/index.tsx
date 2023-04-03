@@ -1,7 +1,6 @@
 import Image from 'next/image';
 
 import { useTransition, animated, config } from 'react-spring';
-import { PageTitle } from '../PageTitle';
 import { Notification } from 'domain/entities/Notification';
 import { NotificationsContainer } from '../NotificationsContainer';
 import { NotificationCard } from '../NotificationCard';
@@ -12,6 +11,7 @@ import notificationIcon from 'assets/images/notification-button.svg';
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useState } from 'react';
+import { PageTitle } from '../PageTitle';
 interface NotificationsModalProps {
   notifications: Notification[];
 }

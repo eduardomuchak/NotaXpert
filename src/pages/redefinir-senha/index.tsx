@@ -1,9 +1,9 @@
 import React, { ChangeEvent, useState } from 'react';
 
 import { useRouter } from 'next/router';
-import { Input } from 'presentation/ui/Input';
-import { Button } from 'presentation/ui/Button';
-import { ToggleEyePassword } from 'presentation/ui/ToggleEyePassword';
+import { Input } from 'presentation/components/Input';
+import { Button } from 'presentation/components/Button';
+import { ToggleEyePassword } from 'presentation/components/ToggleEyePassword';
 
 import Image from 'next/image';
 import logo from 'assets/images/sanofi-logo.svg';

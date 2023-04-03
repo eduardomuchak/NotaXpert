@@ -1,7 +1,7 @@
-import { FileDropzone } from "presentation/ui/FileDropzone";
-import { PageContainer } from "presentation/ui/PageContainer";
-import { PageTitle } from "presentation/ui/PageTitle";
-import { withAuth } from "security/withAuth";
+import { FileDropzone } from 'presentation/components/FileDropzone';
+import { PageContainer } from 'presentation/components/PageContainer';
+import { PageTitle } from 'presentation/components/PageTitle';
+import { withAuth } from 'security/withAuth';
 
 function Upload() {
   return (

@@ -1,20 +1,20 @@
-import { ChangeEvent, useState } from "react";
-import Image from "next/image";
-import { Input } from "presentation/ui/Input";
-import logo from "assets/images/sanofi-logo.svg";
-import { Button } from "presentation/ui/Button";
-import { ToggleEyePassword } from "presentation/ui/ToggleEyePassword";
-import Link from "next/link";
-import { AuthUser } from "domain/usecases/AuthUser";
-import { useAuthStore } from "presentation/hooks/auth";
+import { ChangeEvent, useState } from 'react';
+import Image from 'next/image';
+import { Input } from 'presentation/components/Input';
+import logo from 'assets/images/sanofi-logo.svg';
+import { Button } from 'presentation/components/Button';
+import { ToggleEyePassword } from 'presentation/components/ToggleEyePassword';
+import Link from 'next/link';
+import { AuthUser } from 'domain/usecases/AuthUser';
+import { useAuthStore } from 'presentation/hooks/auth';
 
 interface LoginUIProps {
   authUser: AuthUser;
 }
 
 export default function LoginUI(props: LoginUIProps) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const signin = useAuthStore((state) => state.signin);
@@ -51,7 +51,7 @@ export default function LoginUI(props: LoginUIProps) {
       >
         <Image
           src={logo}
-          alt={"Sanofi Logo"}
+          alt={'Sanofi Logo'}
           className="w-full max-w-[300px] mb-10 mx-auto"
         />
         <div className="flex flex-col gap-6 w-full">
@@ -75,7 +75,7 @@ export default function LoginUI(props: LoginUIProps) {
             }
             label="Password"
             id="password"
-            type={isPasswordVisible ? "text" : "password"}
+            type={isPasswordVisible ? 'text' : 'password'}
             value={password}
             onChange={(event) => handlePassword(event)}
           />

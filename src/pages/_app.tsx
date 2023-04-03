@@ -1,12 +1,12 @@
-import type { AppProps } from "next/app";
-import { Header } from "presentation/ui/Header";
+import type { AppProps } from 'next/app';
+import { Header } from 'presentation/components/Header';
 
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
 
-import "styles/globals.css";
+import 'styles/globals.css';
 
 export default function App({ Component, pageProps }: AppProps) {
-  const headlessRoutes = ["/login", "/recuperar-senha", "/redefinir-senha"];
+  const headlessRoutes = ['/login', '/recuperar-senha', '/redefinir-senha'];
   const { pathname } = useRouter();
 
   return (
@@ -16,4 +16,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </>
   );
 }
-

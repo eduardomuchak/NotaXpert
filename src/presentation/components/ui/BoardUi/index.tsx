@@ -1,6 +1,6 @@
-import { Task } from "domain/entities/Task";
-import { FetchTask } from "domain/usecases/FetchTasks";
-import { useEffect, useState } from "react";
+import { Task } from 'domain/entities/Task';
+import { FetchTask } from 'domain/usecases/FetchTasks';
+import { useEffect, useState } from 'react';
 
 interface BoardUIProps {
   fetchTask: FetchTask;
@@ -11,6 +11,7 @@ export const BoardUI = (props: BoardUIProps) => {
 
   useEffect(() => {
     handleLoad();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function handleLoad() {

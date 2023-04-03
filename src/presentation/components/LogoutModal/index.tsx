@@ -4,7 +4,6 @@ import { useState } from 'react';
 import { FiLogOut } from 'react-icons/fi';
 import { focusStyles } from 'styles/focus';
 import AlertIcon from 'assets/images/alert-icon.svg';
-import { Button } from '../Button';
 
 import { useTransition, animated, config } from 'react-spring';
 import { destroyCookie } from 'nookies';
@@ -52,14 +51,16 @@ export function LogoutModal() {
                   Ao confirmar você será desconectado da plataforma.
                 </AlertDialog.Description>
                 <div className="flex w-full items-center justify-center gap-6">
-                  <AlertDialog.Cancel className={`${focusStyles} rounded-full`}>
-                    <Button variant="secondary">Cancelar</Button>
+                  <AlertDialog.Cancel
+                    className={`${focusStyles} rounded-full h-12 font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark`}
+                  >
+                    <span className="px-4">Cancelar</span>
                   </AlertDialog.Cancel>
                   <AlertDialog.Action
-                    className={`${focusStyles} rounded-full`}
+                    className={`${focusStyles} h-12 rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark`}
                     onClick={() => handleLogout()}
                   >
-                    <Button variant="primary">Confirmar</Button>
+                    <span className="px-4">Confirmar</span>
                   </AlertDialog.Action>
                 </div>
               </AlertDialog.Content>

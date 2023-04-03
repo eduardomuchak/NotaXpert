@@ -12,7 +12,7 @@ interface LoginUIProps {
   authUser: AuthUser;
 }
 
-export default function LoginUI(props: LoginUIProps) {
+export function LoginUI(props: LoginUIProps) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);

@@ -1,12 +1,7 @@
-import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
-import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
+import { StatisticsUi } from 'presentation/components/ui/StatisticsUi';
 import { withAuth } from 'security/withAuth';
 
 function Estatisticas() {
-  return (
-    <PageContainer>
-      <PageTitle>Estatísticas</PageTitle>
-    </PageContainer>
-  );
+  return <StatisticsUi />;
 }
 export default withAuth(Estatisticas);

@@ -1,15 +1,8 @@
-import { FileDropzone } from 'presentation/components/FileDropzone';
-import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
-import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
+import { UploadUi } from 'presentation/components/ui/UploadUi';
 import { withAuth } from 'security/withAuth';
 
 function Upload() {
-  return (
-    <PageContainer>
-      <PageTitle isCentered>Upload de Backlog</PageTitle>
-      <FileDropzone />
-    </PageContainer>
-  );
+  return <UploadUi />;
 }
 
 export default withAuth(Upload);

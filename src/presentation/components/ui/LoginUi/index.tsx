@@ -17,7 +17,7 @@ export function LoginUI(props: LoginUIProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
-  const [isErrorModalVisible, setIsErrorModalVisible] = useState(true);
+  const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
 
   const signin = useAuthStore((state) => state.signin);
 

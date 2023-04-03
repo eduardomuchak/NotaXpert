@@ -1,5 +1,5 @@
-import { Fragment } from 'react';
-import { BsList } from 'react-icons/bs';
+import { Fragment, useState } from 'react';
+import { HiMenu } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
 import { Popover, Transition } from '@headlessui/react';
 
@@ -7,8 +7,14 @@ import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NotificationsModal } from '../NotificationsModal';
+import { LogoutModal } from '../LogoutModal';
+import { focusStyles } from 'styles/focus';
+import { CloseButton } from './CloseButton';
+import { OpenMenu } from './OpenMenu';
 
 export function Header() {
+  const [isHovering, setIsHovering] = useState(false);
+
   const pages = [
     {
       name: 'Board',
@@ -61,10 +67,9 @@ export function Header() {
           </Link>
         </div>
         <div className="-my-2 -mr-2 md:hidden flex gap-4">
+          <OpenMenu />
           <NotificationsModal notifications={notificationsMock} />
-          <Popover.Button className="border border-violet-500 h-14 w-14 font-semibold rounded-2xl p-2 flex justify-center items-center hover:bg-violet-600 transition-colors focus:outline-none focus:ring-2 focus:ring-violet-600 focus:ring-offset-2 focus:ring-offset-background">
-            <BsList className="h-6 w-6" aria-hidden="true" color="white" />
-          </Popover.Button>
+          <LogoutModal />
         </div>
         <nav className="hidden gap-[42px] md:flex text-white items-start">
           {pages.map((page, index) => (
@@ -77,8 +82,9 @@ export function Header() {
             </Link>
           ))}
         </nav>
-        <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
+        <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0 gap-4">
           <NotificationsModal notifications={notificationsMock} />
+          <LogoutModal />
         </div>
       </div>
 
@@ -106,13 +112,7 @@ export function Header() {
                   />
                 </div>
                 <div className="-mr-2">
-                  <Popover.Button className="inline-flex items-center justify-center h-14 w-14 rounded-2xl bg-violet-500 p-2 text-gray-300 hover:bg-violet-600 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-600">
-                    <AiOutlineClose
-                      className="h-6 w-6"
-                      aria-hidden="true"
-                      color={'white'}
-                    />
-                  </Popover.Button>
+                  <CloseButton />
                 </div>
               </div>
               <nav className="flex flex-col items-end gap-y-8 mt-6 mr-4 text-white">

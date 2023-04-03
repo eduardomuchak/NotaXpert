@@ -9,7 +9,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'h-12 rounded-full font-sanofiSansRegular text-xl transition-all  disabled:hover:cursor-not-allowed',
+        'h-12 rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed',
         {
           'bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark':
             variant === 'primary',
@@ -19,7 +19,7 @@ export function Button({
       )}
       {...rest}
     >
-      <span>{children}</span>
+      <span className="px-4">{children}</span>
     </button>
   );
 }

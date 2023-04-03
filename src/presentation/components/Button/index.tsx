@@ -1,5 +1,5 @@
-import clsx from 'clsx';
-import { CustomButton } from './interface';
+import clsx from "clsx";
+import { CustomButton } from "./interface";
 
 export function Button({
   children,
@@ -11,11 +11,11 @@ export function Button({
       className={clsx(
         'h-12 rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed',
         {
-          'bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark':
-            variant === 'primary',
-          'text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark ':
-            variant === 'secondary',
-        },
+          "bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark":
+            variant === "primary",
+          "text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark ":
+            variant === "secondary",
+        }
       )}
       {...rest}
     >

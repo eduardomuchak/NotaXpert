@@ -1,7 +1,7 @@
 import { User } from "domain/entities/User";
 
 export type InputDTO = {
-  user: string;
+  email: string;
   password: string;
 };
 

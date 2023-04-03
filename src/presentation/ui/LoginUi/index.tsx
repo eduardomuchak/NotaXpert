@@ -31,7 +31,7 @@ export default function LoginUI(props: LoginUIProps) {
     event.preventDefault();
 
     const payload = await props.authUser.execute({
-      user: email,
+      email,
       password,
     });
 
@@ -39,7 +39,7 @@ export default function LoginUI(props: LoginUIProps) {
       return;
     }
 
-    signin(payload);
+    signin({ email, password });
   }
 
   return (

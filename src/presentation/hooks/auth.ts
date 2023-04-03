@@ -18,7 +18,7 @@ export const useAuthStore = create<AuthState>((set) => ({
   token: null,
   signin: async (payload) => {
     const { token } = await signinRequest({
-      email: payload.user,
+      email: payload.email,
       password: payload.password,
     });
 
@@ -27,7 +27,9 @@ export const useAuthStore = create<AuthState>((set) => ({
     });
 
     UserFactory.authUser.execute(payload).then((response) => {
-      set({ user: response!.user, token: response!.token });
+      if (response) {
+        set({ user: response.user, token: response.token });
+      }
     });
 
     Router.push("/");

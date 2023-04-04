@@ -4,7 +4,7 @@ export const options = {
     padding: {
       left: 0,
       right: 0,
-      top: 40,
+      top: 20,
       bottom: 0,
     },
   },
@@ -66,4 +66,5 @@ export const options = {
       clamp: true,
     },
   },
+  radius: '90%',
 };

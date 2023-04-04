@@ -1,5 +1,4 @@
 import { ChartContainer } from 'presentation/components/ChartContainer';
-import { LineChart } from 'presentation/components/LineChart';
 import { StatisticsContainer } from 'presentation/components/StatisticsContainer';
 import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
 import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';

@@ -1,4 +1,4 @@
-export const data = [
+export const lineChartData = [
     {
       label: "Backlog",
       data: [0, 20, 50, 80, 120],

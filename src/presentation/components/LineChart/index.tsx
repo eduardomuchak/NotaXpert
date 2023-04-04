@@ -24,11 +24,12 @@ ChartJS.register(
 );
 
 export interface LineChartProps {
+    title: string;
+    data: LineChartData[];
     allVIMs: boolean;
-    data: LineChartaData[];
 }
 
-export interface LineChartaData {
+type LineChartData = {
     label: string;
     data: number[];
     borderColor: string;
@@ -118,15 +119,13 @@ export function LineChart(props: LineChartProps) {
         },
     };
 
-    const labels = ['1d', '7d', '15d', '21d', '30d'];
-
     const data = {
-        labels,
+        labels: ['1d', '7d', '15d', '21d', '30d'],
         datasets: props.data,
     };
 
     return (
-        <ChartContainer chartTitle="VIMs">
+        <ChartContainer chartTitle={props.title}>
             <Line data={data} options={options} ></Line>
         </ChartContainer>
     );

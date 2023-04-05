@@ -1,21 +1,23 @@
-import { ChangeEvent, useState } from "react";
-import Image from "next/image";
-import { Input } from "presentation/components/Input";
-import logo from "assets/images/sanofi-logo.svg";
-import { Button } from "presentation/components/Button";
-import { ToggleEyePassword } from "presentation/components/ToggleEyePassword";
-import Link from "next/link";
-import { AuthUser } from "domain/usecases/AuthUser";
-import { useAuthStore } from "presentation/hooks/auth";
-import { LoginErrorModal } from "../LoginErrorModal";
+import { ChangeEvent, FormEvent, useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import { Input } from 'presentation/components/Input';
+import logo from 'assets/images/sanofi-logo.svg';
+import { Button } from 'presentation/components/Button';
+import { ToggleEyePassword } from 'presentation/components/ToggleEyePassword';
+import { AuthUser } from 'domain/usecases/AuthUser';
+import { useAuthStore } from 'presentation/hooks/auth';
+
+import { LoginErrorModal } from '../LoginErrorModal';
 
 interface LoginUIProps {
   authUser: AuthUser;
 }
 
 export function LoginUI(props: LoginUIProps) {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
   const [isErrorModalVisible, setIsErrorModalVisible] = useState(false);
 
@@ -29,7 +31,7 @@ export function LoginUI(props: LoginUIProps) {
     setPassword(event.target.value);
   };
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
     const payload = await props.authUser.execute({
@@ -61,7 +63,7 @@ export function LoginUI(props: LoginUIProps) {
         >
           <Image
             src={logo}
-            alt={"Sanofi Logo"}
+            alt={'Sanofi Logo'}
             className="w-full max-w-[300px] mb-10 mx-auto"
           />
           <div className="flex flex-col gap-6 w-full">
@@ -76,7 +78,6 @@ export function LoginUI(props: LoginUIProps) {
               icon={
                 <ToggleEyePassword
                   isPasswordVisible={isPasswordVisible}
-                  setIsPasswordVisible={setIsPasswordVisible}
                   onClick={(event) => {
                     event.preventDefault();
                     setIsPasswordVisible(!isPasswordVisible);
@@ -85,7 +86,7 @@ export function LoginUI(props: LoginUIProps) {
               }
               label="Password"
               id="password"
-              type={isPasswordVisible ? "text" : "password"}
+              type={isPasswordVisible ? 'text' : 'password'}
               value={password}
               onChange={(event) => handlePassword(event)}
             />

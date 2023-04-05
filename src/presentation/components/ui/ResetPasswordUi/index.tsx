@@ -1,11 +1,10 @@
 import React, { ChangeEvent, useState } from 'react';
-
 import { useRouter } from 'next/router';
+import Image from 'next/image';
+
 import { Input } from 'presentation/components/Input';
 import { Button } from 'presentation/components/Button';
 import { ToggleEyePassword } from 'presentation/components/ToggleEyePassword';
-
-import Image from 'next/image';
 import logo from 'assets/images/sanofi-logo.svg';
 
 export function ResetPasswordUi() {
@@ -50,7 +49,6 @@ export function ResetPasswordUi() {
             icon={
               <ToggleEyePassword
                 isPasswordVisible={isPasswordVisible}
-                setIsPasswordVisible={setIsPasswordVisible}
                 onClick={(event) => {
                   event.preventDefault();
                   setIsPasswordVisible(!isPasswordVisible);
@@ -68,7 +66,6 @@ export function ResetPasswordUi() {
             icon={
               <ToggleEyePassword
                 isPasswordVisible={isConfirmPasswordVisible}
-                setIsPasswordVisible={setIsConfirmPasswordVisible}
                 onClick={(event) => {
                   event.preventDefault();
                   setIsConfirmPasswordVisible(!isConfirmPasswordVisible);

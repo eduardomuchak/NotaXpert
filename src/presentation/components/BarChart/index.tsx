@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -7,11 +7,13 @@ import {
   Title,
   Tooltip,
   Legend,
-} from "chart.js";
-import { options } from "./chartOptions";
-import { Bar } from "react-chartjs-2";
-import { ChartContainer } from "../ChartContainer";
-import ChartDataLabels from "chartjs-plugin-datalabels";
+} from 'chart.js';
+import { Bar } from 'react-chartjs-2';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+
+import { ChartContainer } from '../ChartContainer';
+
+import { options } from './chartOptions';
 
 ChartJS.register(
   CategoryScale,
@@ -20,7 +22,7 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  ChartDataLabels
+  ChartDataLabels,
 );
 
 type chartData = {

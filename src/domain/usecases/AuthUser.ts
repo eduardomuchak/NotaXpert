@@ -1,4 +1,4 @@
-import { User } from "domain/entities/User";
+import { User } from 'domain/entities/User';
 
 export type InputDTO = {
   email: string;
@@ -11,5 +11,6 @@ export type OutputDTO = {
 };
 
 export interface AuthUser {
+  // eslint-disable-next-line no-unused-vars
   execute(data: InputDTO): Promise<OutputDTO | null>;
 }

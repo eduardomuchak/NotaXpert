@@ -1,20 +1,17 @@
-import { Fragment, useState } from 'react';
-import { HiMenu } from 'react-icons/hi';
-import { AiOutlineClose } from 'react-icons/ai';
+import { Fragment } from 'react';
 import { Popover, Transition } from '@headlessui/react';
-
-import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import sanofiLogoLight from 'assets/images/sanofi-logo-light.svg';
+
 import { NotificationsModal } from '../NotificationsModal';
 import { LogoutModal } from '../LogoutModal';
-import { focusStyles } from 'styles/focus';
+
 import { CloseButton } from './CloseButton';
 import { OpenMenu } from './OpenMenu';
 
 export function Header() {
-  const [isHovering, setIsHovering] = useState(false);
-
   const pages = [
     {
       name: 'Board',

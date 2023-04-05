@@ -2,12 +2,12 @@ import * as AlertDialog from '@radix-ui/react-alert-dialog';
 import Image from 'next/image';
 import { useState } from 'react';
 import { FiLogOut } from 'react-icons/fi';
-import { focusStyles } from 'styles/focus';
-import AlertIcon from 'assets/images/alert-icon.svg';
-
 import { useTransition, animated, config } from 'react-spring';
 import { destroyCookie } from 'nookies';
 import { useRouter } from 'next/router';
+
+import AlertIcon from 'assets/images/alert-icon.svg';
+import { focusStyles } from 'styles/focus';
 
 export function LogoutModal() {
   const [open, setOpen] = useState(false);

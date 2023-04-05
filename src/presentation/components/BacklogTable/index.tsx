@@ -1,12 +1,15 @@
+import { create } from 'zustand';
+
+import FilterTable from 'presentation/components/FilterTable';
+import { KanbanView } from 'presentation/components/KanbanView';
+
+import { ButtonView } from '../ButtonView';
+
 import { TableBody } from './TableBody';
 import { TableHead } from './TableHead';
-import FilterTable from 'presentation/components/FilterTable';
-
 import { tableHeadItems } from './mocks';
 import { nfs } from './mocks';
-import { ButtonView } from '../ButtonView';
-import { KanbanView } from 'presentation/components/KanbanView';
-import { create } from 'zustand';
+
 // import { NotificationCard } from "../NotificationCard";
 
 type MyStoreType = {
@@ -21,7 +24,7 @@ export const useMyStore = create<MyStoreType>((set) => ({
 }));
 
 export function BacklogTable() {
-  const { isButtonPressed, toggleButton } = useMyStore();
+  const { isButtonPressed } = useMyStore();
   return (
     <>
       <div className="w-full overflow-x-auto">

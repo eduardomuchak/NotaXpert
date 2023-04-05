@@ -2,25 +2,25 @@ export const options = {
   responsive: true,
   plugins: {
     datalabels: {
-      color: "white",
+      color: 'white',
       font: {
-        family: "sanofiSansRegular",
+        family: 'sanofiSansRegular',
         size: 16,
       },
-      align: "start" as "start",
+      align: 'start' as 'start',
       offset: 10,
-      anchor: "end" as "end",
+      anchor: 'end' as 'end',
     },
     legend: {
       display: true,
-      position: "bottom" as "bottom",
+      position: 'bottom' as 'bottom',
       labels: {
         boxWidth: 20,
         boxHeight: 20,
         padding: 16,
         font: {
           size: 16,
-          family: "sanofiSansRegular",
+          family: 'sanofiSansRegular',
         },
       },
     },

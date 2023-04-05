@@ -1,18 +1,18 @@
 import Image from 'next/image';
-
 import { useTransition, animated, config } from 'react-spring';
-import { Notification } from 'domain/entities/Notification';
-import { NotificationsContainer } from '../NotificationsContainer';
-import { NotificationCard } from '../NotificationCard';
 import { FaBell } from 'react-icons/fa';
-
-import warningIcon from 'assets/images/warning-icon.svg';
-import notificationIcon from 'assets/images/notification-button.svg';
-
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu';
 import { useState } from 'react';
-import { PageTitle } from '../ui/PageUi/PageTitle';
+
+import { Notification } from 'domain/entities/Notification';
+import warningIcon from 'assets/images/warning-icon.svg';
+import notificationIcon from 'assets/images/notification-button.svg';
 import { focusStyles } from 'styles/focus';
+
+import { NotificationsContainer } from '../NotificationsContainer';
+import { NotificationCard } from '../NotificationCard';
+import { PageTitle } from '../ui/PageUi/PageTitle';
+
 interface NotificationsModalProps {
   notifications: Notification[];
 }

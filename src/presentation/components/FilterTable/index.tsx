@@ -8,13 +8,13 @@ import { ButtonFilter } from './ButtonFilter';
 
 export default function FilterTable() {
   return (
-    <div className='flex flex-row gap-3 w-full pb-2 max-h-[40px]'>
+    <div className="flex flex-row gap-3 w-full pb-2 max-h-[40px]">
       <SearchImput />
-      <DropdownButton props={{label:'Tipo de doc', content:<Types />}} />
-      <DropdownButton props={{label:'Agentes', content:<Agents />}} />
-      <DropdownButton props={{label:'SLA', content:<SLA />}} />
-      <DropdownButton props={{label:'Vencido a', content:<Period />}} />
-      <ButtonFilter props={{label:"Ordenar"}} />
+      <DropdownButton props={{ label: 'Tipo de doc', content: <Types /> }} />
+      <DropdownButton props={{ label: 'Agentes', content: <Agents /> }} />
+      <DropdownButton props={{ label: 'SLA', content: <SLA /> }} />
+      <DropdownButton props={{ label: 'Vencido a', content: <Period /> }} />
+      <ButtonFilter props={{ label: 'Ordenar' }} />
     </div>
   );
 }

@@ -1,7 +1,7 @@
 export const status = [
-    "Backlog",
-    "Em tratamento",
-    "Com Solicitante",
-    "Regras",
-    "Completo",
-]
+  'Backlog',
+  'Em tratamento',
+  'Com Solicitante',
+  'Regras',
+  'Completo',
+];

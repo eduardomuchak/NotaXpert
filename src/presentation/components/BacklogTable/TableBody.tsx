@@ -1,5 +1,6 @@
-import { TableBodyItems } from "./TableBodyItems";
-import { Backlog } from "domain/entities/Backlog";
+import { Backlog } from 'domain/entities/Backlog';
+
+import { TableBodyItems } from './TableBodyItems';
 
 export function TableBody(props: Backlog.BacklogTableBody) {
   return (

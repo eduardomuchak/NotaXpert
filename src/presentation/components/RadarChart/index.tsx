@@ -59,7 +59,7 @@ const options = {
           return radarChartLabels[context[0].dataIndex];
         },
         label: (context: any) => {
-          return `${context.dataset.data[context.dataIndex]} VIMs`;
+          return `  ${context.dataset.data[context.dataIndex]} VIMs`;
         },
       },
     },

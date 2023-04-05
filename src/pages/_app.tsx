@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
-import { Header } from 'presentation/components/Header';
-
 import { useRouter } from 'next/router';
+
+import { Header } from 'presentation/components/Header';
 
 import 'styles/globals.css';
 

@@ -1,18 +1,19 @@
-import axios, { AxiosInstance } from "axios";
-import { HttpClient } from "./HttpClient";
-import { parseCookies } from "nookies";
+import axios, { AxiosInstance } from 'axios';
+import { parseCookies } from 'nookies';
+
+import { HttpClient } from './HttpClient';
 
 export class AxiosHttpClient implements HttpClient {
   private client: AxiosInstance = axios.create({
-    baseURL: "http://localhost:3333",
+    baseURL: 'http://localhost:3333',
   });
-  
+
   constructor() {
     const cookies = parseCookies();
-    const sanofiToken = cookies["sanofi-token"];
+    const sanofiToken = cookies['sanofi-token'];
 
     if (sanofiToken) {
-      this.client.defaults.headers["Authorization"] = `Bearer ${sanofiToken}`;
+      this.client.defaults.headers['Authorization'] = `Bearer ${sanofiToken}`;
     }
   }
 

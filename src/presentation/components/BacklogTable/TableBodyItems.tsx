@@ -1,4 +1,4 @@
-import { Backlog } from "domain/entities/Backlog";
+import { Backlog } from 'domain/entities/Backlog';
 
 export function TableBodyItems({
   vim,

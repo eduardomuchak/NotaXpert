@@ -1,14 +1,15 @@
 export namespace Task {
-  export type Status = "Em andamento" | "Finalizada";
+  export type Status = 'Em andamento' | 'Finalizada';
   export interface Props {
     name: string;
     status: Status;
   }
 }
 
+// eslint-disable-next-line no-redeclare
 export class Task {
   public name: string;
-  public status: Task.Status = "Em andamento";
+  public status: Task.Status = 'Em andamento';
 
   constructor(props: Task.Props) {
     Object.assign(this, props);
@@ -19,6 +20,6 @@ export class Task {
   }
 
   close() {
-    this.status = "Finalizada";
+    this.status = 'Finalizada';
   }
 }

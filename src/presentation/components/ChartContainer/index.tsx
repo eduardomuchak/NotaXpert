@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { ReactNode } from 'react';
+
 import DownloadIcon from 'assets/images/download-icon.svg';
 
 interface ChartContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   chartTitle: string;
 }
 

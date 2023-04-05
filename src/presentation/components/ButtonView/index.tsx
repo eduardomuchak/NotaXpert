@@ -1,6 +1,8 @@
 import { useMyStore } from 'presentation/components/BacklogTable';
+
 import { ButtonViewProps } from './interface';
 
+// eslint-disable-next-line no-unused-vars
 export function ButtonView(props: ButtonViewProps) {
   const { isButtonPressed, toggleButton } = useMyStore();
   return (

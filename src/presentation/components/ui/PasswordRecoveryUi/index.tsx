@@ -1,10 +1,9 @@
 import React, { ChangeEvent, useState } from 'react';
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
 import { Input } from 'presentation/components/Input';
 import { Button } from 'presentation/components/Button';
-import { useRouter } from 'next/router';
-
-import Image from 'next/image';
 import logo from 'assets/images/sanofi-logo.svg';
 
 export function PasswordRecoveryUi() {
@@ -12,7 +11,7 @@ export function PasswordRecoveryUi() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    console.log(email);
+    // console.log(email);
   }
 
   const handleEmailChange = (event: ChangeEvent<HTMLInputElement>) => {

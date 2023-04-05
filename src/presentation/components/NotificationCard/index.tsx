@@ -1,6 +1,6 @@
-import { Notification } from 'domain/entities/Notification';
-
 import Image from 'next/image';
+
+import { Notification } from 'domain/entities/Notification';
 import warningIcon from 'assets/images/warning-icon.svg';
 
 interface NotificationCardProps {

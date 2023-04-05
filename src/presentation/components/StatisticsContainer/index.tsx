@@ -1,8 +1,10 @@
 import Image from 'next/image';
+import { ReactNode } from 'react';
+
 import DownloadIcon from 'assets/images/download-icon.svg';
 
 interface StatisticsContainerProps {
-  children: React.ReactNode;
+  children: ReactNode;
   title: string;
 }
 

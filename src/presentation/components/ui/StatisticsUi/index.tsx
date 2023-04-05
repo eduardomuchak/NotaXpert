@@ -70,10 +70,19 @@ export function StatisticsUi() {
         <PageTitle>Estatísticas</PageTitle>
       </PageContainer>
       <GrayBackgroundContainer>
+        <StatisticsContainer title="76%">
+          <span className="text-2xl font-sanofiSansBold">
+            de todos os VIMs foram processados antes do vencimento
+          </span>
+        </StatisticsContainer>
+        <StatisticsContainer title="1d04h23min">
+          <span className="text-2xl font-sanofiSansBold">
+            foi o tempo médio de processamento completo de um VIM
+          </span>
+        </StatisticsContainer>
         <ChartContainer chartTitle="Porcentagem de VIMs completos e incompletos">
           <PieChart data={data} />
         </ChartContainer>
-
         <ChartContainer chartTitle="Atraso de VIMs">
           <PieChart data={data2} />
         </ChartContainer>

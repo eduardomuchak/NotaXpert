@@ -27,7 +27,6 @@ ChartJS.register(
 export interface LineChartProps {
   title: string;
   data: LineChartData[];
-  allVIMs: boolean;
 }
 
 type LineChartData = {
@@ -98,13 +97,13 @@ export function LineChart(props: LineChartProps) {
     },
     scales: {
       x: {
-        display: props.allVIMs,
+        display: true,
         ticks: {
           color: 'black',
         },
         grid: {
           color: 'rgba(0, 0, 0, 1)',
-          display: props.allVIMs,
+          display: true,
         },
       },
       y: {

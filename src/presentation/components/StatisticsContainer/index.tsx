@@ -14,9 +14,9 @@ export function StatisticsContainer({
 }: StatisticsContainerProps) {
   return (
     <div className="flex flex-1 w-full">
-      <div className="bg-white rounded-[64px] shadow-customShadow h-fit flex flex-col p-8 w-full">
+      <div className="bg-white rounded-[64px] shadow-customShadow h-auto flex flex-col p-8 w-full justify-between">
         <div className="flex justify-between">
-          <span className="font-sanofiSansBold text-secondaryGreen text-[50px] leading-[56px]">
+          <span className="font-sanofiSansBold text-secondaryGreen text-[34px] md:text-[50px] leading-[56px]">
             {title}
           </span>
           <div className="w-9 h-9 rounded-full bg-sanofiPurple flex items-center justify-center">

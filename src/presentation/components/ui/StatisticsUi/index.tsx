@@ -20,9 +20,11 @@ export function StatisticsUi() {
         <TempoCapacidadeProcessamento />
         <PorcentagemDeVIMsCompletosEIncompletos />
         <AtrasoDeVIMs />
-        <ComparacaoDeVolumeDeRegras />
         <TempoMedioProcessamentoCompletoVIM />
       </GrayBackgroundContainer>
+      <div className="bg-sanofiGray px-6 pb-6 md:px-8 md:pb-8">
+        <ComparacaoDeVolumeDeRegras />
+      </div>
     </>
   );
 }

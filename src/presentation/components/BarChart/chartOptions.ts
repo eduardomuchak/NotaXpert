@@ -1,5 +1,13 @@
 export const options = {
   responsive: true,
+  layout: {
+    padding: {
+      left: 0,
+      right: 0,
+      top: 20,
+      bottom: 0,
+    },
+  },
   plugins: {
     datalabels: {
       color: 'white',
@@ -14,10 +22,11 @@ export const options = {
     legend: {
       display: true,
       position: 'bottom' as 'bottom',
+      align: 'start' as 'start',
       labels: {
         boxWidth: 20,
         boxHeight: 20,
-        padding: 16,
+        padding: 30,
         font: {
           size: 16,
           family: 'sanofiSansRegular',
@@ -42,4 +51,6 @@ export const options = {
       display: true,
     },
   },
+  barPercentage: 0.9,
+  categoryPercentage: 1,
 };

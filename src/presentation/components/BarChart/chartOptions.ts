@@ -51,4 +51,6 @@ export const options = {
       display: true,
     },
   },
+  barPercentage: 0.9,
+  categoryPercentage: 1,
 };

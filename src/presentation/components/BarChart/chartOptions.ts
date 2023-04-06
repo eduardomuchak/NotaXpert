@@ -26,10 +26,12 @@ export const options = {
       labels: {
         boxWidth: 20,
         boxHeight: 20,
-        padding: 30,
+        padding: 20,
+        color: '#000000',
         font: {
           size: 16,
           family: 'sanofiSansRegular',
+          color: '#000000',
         },
       },
     },

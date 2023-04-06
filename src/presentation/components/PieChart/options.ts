@@ -13,10 +13,11 @@ export const options = {
       position: 'bottom' as 'bottom',
       offset: 20,
       labels: {
+        color: '#000000',
         font: {
           size: 16,
           family: 'sanofiSansRegular',
-          weight: 'bold' as 'bold',
+          color: '#000000',
         },
         boxWidth: 20,
         boxHeight: 20,

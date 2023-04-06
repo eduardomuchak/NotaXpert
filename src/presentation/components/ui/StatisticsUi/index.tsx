@@ -1,28 +1,15 @@
-import { ChartContainer } from 'presentation/components/ChartContainer';
+// import { ChartContainer } from 'presentation/components/ChartContainer';
 import { GrayBackgroundContainer } from 'presentation/components/GrayBackgroundContainer';
 // import { PieChart } from 'presentation/components/PieChart';
 // import { colors } from 'presentation/components/PieChart/colors';
 // import { PieChartComponent } from 'presentation/components/PieChart/interface';
-import { RadarChart } from 'presentation/components/RadarChart';
 // import { StatisticsContainer } from 'presentation/components/StatisticsContainer';
 import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
 import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
 
+import { ComparacaoDeVolumeDeRegras } from './ComparacaoDeVolumeDeRegras';
+
 export function StatisticsUi() {
-  const radarChartLabels = [
-    '1 - Número do pedido inválido ou não informado',
-    '2 - Validação NCM XML',
-    '3 - Processar fatura com OCR',
-    '4 - Inconsistência filial Nota Fiscal x Pedido de Compras',
-    '5 - Recebimento divergente do valor total da NF',
-    '6 - CPF/CNPJ do fornecedor divergente do Pedido de Compras',
-    '7 - Aguardando entrada DANFE',
-    '8 - Código de fornecedor VIM diferente de PO',
-    '9 - Suspeita de duplicidade',
-    '10 - Moeda não coincide com a informada no PO',
-    '11 - Falta de informação obrigatória',
-    '12 - Fornecedor bloqueado para pagamento',
-  ];
   // const mockData: PieChartComponent.Data[] = [
   //   {
   //     value: 20,
@@ -106,22 +93,7 @@ export function StatisticsUi() {
             capacidade de processamento
           </span>
         </StatisticsContainer> */}
-
-        <ChartContainer chartTitle="Comparação de Volume de regras">
-          <div className="w-full flex flex-1 gap-14 flex-col xl:flex-row pt-4">
-            <div className="w-full flex items-center justify-center">
-              <RadarChart />
-            </div>
-
-            <div className="flex flex-col items-start justify-center gap-8 w-full">
-              {radarChartLabels.map((label, index) => (
-                <span key={`${label}-${index}`} className="text-sm">
-                  {label}
-                </span>
-              ))}
-            </div>
-          </div>
-        </ChartContainer>
+        <ComparacaoDeVolumeDeRegras />
       </GrayBackgroundContainer>
     </>
   );

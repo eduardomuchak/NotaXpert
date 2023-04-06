@@ -1,11 +1,13 @@
 import { GrayBackgroundContainer } from 'presentation/components/GrayBackgroundContainer';
-// import { StatisticsContainer } from 'presentation/components/StatisticsContainer';
 import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
 import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
 
-import { ComparacaoDeVolumeDeRegras } from './ComparacaoDeVolumeDeRegras';
-import { PorcentagemDeVIMsCompletosEIncompletos } from './PorcentagemDeVIMsCompletosEIncompletos';
-import { AtrasoDeVIMs } from './AtrasoDeVIMs';
+import { ComparacaoDeVolumeDeRegras } from './charts/ComparacaoDeVolumeDeRegras';
+import { PorcentagemDeVIMsCompletosEIncompletos } from './charts/PorcentagemDeVIMsCompletosEIncompletos';
+import { AtrasoDeVIMs } from './charts/AtrasoDeVIMs';
+import { TempoMedioProcessamentoCompletoVIM } from './statistics/TempoMedioProcessamentoCompletoVIM';
+import { TempoCapacidadeProcessamento } from './statistics/TempoCapacidadeProcessamento';
+import { PorcentagemProcessamentoVIMsAntesDoVencimento } from './statistics/PorcentagemProcessamentoVIMsAntesDoVencimento';
 
 export function StatisticsUi() {
   return (
@@ -14,26 +16,12 @@ export function StatisticsUi() {
         <PageTitle>Estatísticas</PageTitle>
       </PageContainer>
       <GrayBackgroundContainer>
-        {/* <StatisticsContainer title="76%">
-          <span className="text-2xl font-sanofiSansBold">
-            de todos os VIMs foram processados antes do vencimento
-          </span>
-        </StatisticsContainer>
-        <StatisticsContainer title="1d04h23min">
-          <span className="text-2xl font-sanofiSansBold">
-            foi o tempo médio de processamento completo de um VIM
-          </span>
-        </StatisticsContainer>
-        
-        
-        <StatisticsContainer title="2d">
-          <span className="text-2xl font-sanofiSansBold">
-            capacidade de processamento
-          </span>
-        </StatisticsContainer> */}
+        <PorcentagemProcessamentoVIMsAntesDoVencimento />
+        <TempoCapacidadeProcessamento />
         <PorcentagemDeVIMsCompletosEIncompletos />
         <AtrasoDeVIMs />
         <ComparacaoDeVolumeDeRegras />
+        <TempoMedioProcessamentoCompletoVIM />
       </GrayBackgroundContainer>
     </>
   );

@@ -21,8 +21,8 @@ export const options = {
     },
     legend: {
       display: true,
-      position: "bottom" as "bottom",
-      align: "start" as "start",
+      position: 'bottom' as 'bottom',
+      align: 'start' as 'start',
       labels: {
         boxWidth: 20,
         boxHeight: 20,

@@ -13,7 +13,7 @@ export function ChartContainer({ children, chartTitle }: ChartContainerProps) {
     <div className="flex flex-1 w-full">
       <div className="bg-white rounded-[64px] shadow-customShadow h-auto flex flex-col p-8 w-full justify-between">
         <div className="flex w-full justify-between">
-          <span className="font-sanofiSansRegular text-2xl leading-8 break-words">
+          <span className="font-sanofiSansRegular text-lg md:text-2xl leading-8 break-words">
             {chartTitle}
           </span>
           <div className="w-fit">

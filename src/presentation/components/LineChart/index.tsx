@@ -54,6 +54,21 @@ export function LineChart(props: LineChartProps) {
       },
     },
     plugins: {
+      tooltip: {
+        enabled: true,
+        intersect: false,
+        mode: 'index' as const,
+        callbacks: {
+          label: (context: any) => {
+            const label = context.dataset.label || '';
+            if (label) {
+              return `${label}: ${context.formattedValue}`;
+            } else {
+              return context.formattedValue;
+            }
+          },
+        },
+      },
       legend: {
         position: 'bottom' as const,
         align: 'start' as const,
@@ -73,27 +88,28 @@ export function LineChart(props: LineChartProps) {
         display: false,
         text: 'Chart.js Line Chart',
       },
-      datalabels: {
-        anchor: 'end' as const,
-        align: 'right' as const,
-        offset: 5,
-        clamp: true,
-        color: (context: any) => {
-          return context.dataset.backgroundColor;
-        },
-        font: {
-          size: 14,
-          family: 'sanofiSansRegular',
-        },
-        formatter: (_value: number, context: any) => {
-          const dataset = context.dataset.data[context.dataset.data.length - 1];
-          if (_value === dataset) {
-            return dataset;
-          } else {
-            return null;
-          }
-        },
-      },
+      // datalabels: {
+      //   display: true,
+      //   anchor: 'end' as const,
+      //   align: 'right' as const,
+      //   offset: 5,
+      //   clamp: true,
+      //   color: (context: any) => {
+      //     return context.dataset.backgroundColor;
+      //   },
+      //   font: {
+      //     size: 14,
+      //     family: 'sanofiSansRegular',
+      //   },
+      //   formatter: (_value: number, context: any) => {
+      //     const dataset = context.dataset.data[context.dataset.data.length - 1];
+      //     if (_value === dataset) {
+      //       return dataset;
+      //     } else {
+      //       return null;
+      //     }
+      //   },
+      // },
     },
     scales: {
       x: {
@@ -102,16 +118,16 @@ export function LineChart(props: LineChartProps) {
           color: 'black',
         },
         grid: {
-          color: 'rgba(0, 0, 0, 1)',
+          //color: 'rgba(0, 0, 0, 1)',
           display: true,
         },
       },
       y: {
         ticks: {
-          color: 'black',
+          //color: 'black',
         },
         grid: {
-          color: 'rgba(0, 0, 0, 1)',
+          //color: 'rgba(0, 0, 0, 1)',
           display: false,
         },
       },

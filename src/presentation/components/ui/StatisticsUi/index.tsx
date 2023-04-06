@@ -1,3 +1,4 @@
+import { BarChart } from 'presentation/components/BarChart';
 import { ChartContainer } from 'presentation/components/ChartContainer';
 import { GrayBackgroundContainer } from 'presentation/components/GrayBackgroundContainer';
 import { PieChart } from 'presentation/components/PieChart';
@@ -6,6 +7,10 @@ import { PieChartComponent } from 'presentation/components/PieChart/interface';
 import { StatisticsContainer } from 'presentation/components/StatisticsContainer';
 import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
 import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
+import {
+  // formattedData,
+  errorData,
+} from 'presentation/components/BarChart/chartData';
 
 export function StatisticsUi() {
   const mockData: PieChartComponent.Data[] = [
@@ -86,6 +91,9 @@ export function StatisticsUi() {
         <ChartContainer chartTitle="Atraso de VIMs">
           <PieChart data={data2} />
         </ChartContainer>
+        <div className="flex flex-row w-full">
+          <BarChart chartData={errorData}></BarChart>
+        </div>
       </GrayBackgroundContainer>
     </>
   );

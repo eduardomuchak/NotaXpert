@@ -1,4 +1,4 @@
-export const lineChartData = [
+export const lineChartData1 = [
   {
     label: 'Backlog',
     data: [0, 20, 50, 80, 120],
@@ -32,6 +32,23 @@ export const lineChartData = [
     data: [10, 30, 60, 90, 105],
     borderColor: '#478040',
     backgroundColor: '#478040',
+    pointRadius: 0,
+  },
+];
+
+export const lineChartData2 = [
+  {
+    label: 'Backlog',
+    data: [0, 20, 50, 80, 120],
+    borderColor: '#22004C',
+    backgroundColor: '#22004C',
+    pointRadius: 0,
+  },
+  {
+    label: 'Completos',
+    data: [0, 40, 70, 80, 90],
+    borderColor: '#BE006B',
+    backgroundColor: '#BE006B',
     pointRadius: 0,
   },
 ];

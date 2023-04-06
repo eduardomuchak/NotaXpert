@@ -103,13 +103,14 @@ export function LineChart(props: LineChartProps) {
                     color: "black",
                 },
                 grid: {
-                    color: "rgba(0, 0, 0, 1)",
+                    color: "black",
                     display: props.allVIMs,
                 },
             },
             y: {
                 ticks: {
                     color: "black",
+                    padding: 10,
                 },
                 grid: {
                     color: "rgba(0, 0, 0, 1)",

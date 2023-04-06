@@ -1,17 +1,11 @@
-import { ChartContainer } from "presentation/components/ChartContainer";
-import { LineChart } from "presentation/components/LineChart";
-// import { PieChart } from "presentation/components/PieChart";
-import { colors } from "presentation/components/PieChart/colors";
-import { PieChartComponent } from "presentation/components/PieChart/interface";
-import { StatisticsContainer } from "presentation/components/StatisticsContainer";
-import { PageContainer } from "presentation/components/ui/PageUi/PageContainer";
-import { PageTitle } from "presentation/components/ui/PageUi/PageTitle";
-import { lineChartData } from "presentation/components/LineChart/mocks";
-import { BarChart } from "presentation/components/BarChart";
-import {
-  // formattedData,
-  errorData,
-} from "presentation/components/BarChart/chartData";
+import { ChartContainer } from 'presentation/components/ChartContainer';
+import { GrayBackgroundContainer } from 'presentation/components/GrayBackgroundContainer';
+import { PieChart } from 'presentation/components/PieChart';
+import { colors } from 'presentation/components/PieChart/colors';
+import { PieChartComponent } from 'presentation/components/PieChart/interface';
+import { StatisticsContainer } from 'presentation/components/StatisticsContainer';
+import { PageContainer } from 'presentation/components/ui/PageUi/PageContainer';
+import { PageTitle } from 'presentation/components/ui/PageUi/PageTitle';
 
 export function StatisticsUi() {
   const mockData: PieChartComponent.Data[] = [
@@ -71,34 +65,28 @@ export function StatisticsUi() {
   };
 
   return (
-    <PageContainer>
-      <PageTitle>Estatísticas</PageTitle>
-      <div className="w-full flex gap-6">
-        <ChartContainer chartTitle="Teste">
-          <span>Gráfico aqui</span>
-        </ChartContainer>
-
-        <StatisticsContainer title="Teste">
-          <span>Info aqui</span>
+    <>
+      <PageContainer>
+        <PageTitle>Estatísticas</PageTitle>
+      </PageContainer>
+      <GrayBackgroundContainer>
+        <StatisticsContainer title="76%">
+          <span className="text-2xl font-sanofiSansBold">
+            de todos os VIMs foram processados antes do vencimento
+          </span>
         </StatisticsContainer>
-      </div>
-      <div className={"w-full flex flex-row gap-6 mt-6"}>
-        {/* <div className={"w-full"}>
-          <ChartContainer chartTitle="Porcentagem de VIMs completos e incompletos">
-            <PieChart data={data} />
-          </ChartContainer>
-        </div> */}
-        {/* <div className={"w-1/2 flex flex-row gap-6 mt-6"}>
-          <div className={"w-full"}>
-            <LineChart data={lineChartData} title="VIMs" allVIMs={true} />
-          </div>
-        </div> */}
-        <div className={"w-full flex flex-row gap-6 mt-6"}>
-          <div className={"w-full"}>
-            <BarChart chartData={errorData} />
-          </div>
-        </div>
-      </div>
-    </PageContainer>
+        <StatisticsContainer title="1d04h23min">
+          <span className="text-2xl font-sanofiSansBold">
+            foi o tempo médio de processamento completo de um VIM
+          </span>
+        </StatisticsContainer>
+        <ChartContainer chartTitle="Porcentagem de VIMs completos e incompletos">
+          <PieChart data={data} />
+        </ChartContainer>
+        <ChartContainer chartTitle="Atraso de VIMs">
+          <PieChart data={data2} />
+        </ChartContainer>
+      </GrayBackgroundContainer>
+    </>
   );
 }

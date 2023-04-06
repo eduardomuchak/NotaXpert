@@ -1,6 +1,7 @@
 import { Popover } from '@headlessui/react';
 import { useState } from 'react';
 import { HiMenu } from 'react-icons/hi';
+
 import { focusStyles } from 'styles/focus';
 
 export function OpenMenu() {

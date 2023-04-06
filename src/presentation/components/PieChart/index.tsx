@@ -1,6 +1,7 @@
 import ChartDataLabels from 'chartjs-plugin-datalabels';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Pie } from 'react-chartjs-2';
+
 import { options } from './options';
 import { PieChartComponent } from './interface';
 

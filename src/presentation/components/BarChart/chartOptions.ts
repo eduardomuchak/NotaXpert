@@ -10,14 +10,14 @@ export const options = {
   },
   plugins: {
     datalabels: {
-      color: "white",
+      color: 'white',
       font: {
-        family: "sanofiSansRegular",
+        family: 'sanofiSansRegular',
         size: 16,
       },
-      align: "start" as "start",
+      align: 'start' as 'start',
       offset: 10,
-      anchor: "end" as "end",
+      anchor: 'end' as 'end',
     },
     legend: {
       display: true,
@@ -29,7 +29,7 @@ export const options = {
         padding: 30,
         font: {
           size: 16,
-          family: "sanofiSansRegular",
+          family: 'sanofiSansRegular',
         },
       },
     },

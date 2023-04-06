@@ -6,6 +6,7 @@ export namespace User {
   }
 }
 
+// eslint-disable-next-line no-redeclare
 export class User {
   public readonly id: string;
   public name: string;

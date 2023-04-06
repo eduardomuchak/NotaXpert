@@ -1,8 +1,8 @@
-import ReactDOM from "react-dom";
-import Image from "next/image";
-import errorIcon from "assets/images/error-icon.svg";
-import { Button } from "presentation/components/Button";
-import React from "react";
+import Image from 'next/image';
+import React from 'react';
+
+import errorIcon from 'assets/images/error-icon.svg';
+import { Button } from 'presentation/components/Button';
 
 interface LoginErrorModalProps {
   onClose: () => void;

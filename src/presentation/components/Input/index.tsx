@@ -1,6 +1,6 @@
 import { useState } from 'react';
-
 import clsx from 'clsx';
+
 import { CustomInput } from './interface';
 
 export function Input({

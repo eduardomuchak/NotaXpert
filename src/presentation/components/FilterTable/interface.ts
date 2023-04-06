@@ -5,7 +5,7 @@ export namespace Filter {
 
   export interface DropdownMenuProps {
     label: string;
-    content: JSX.Element;
+    content: Element;
   }
 
   export interface CheckboxProps {

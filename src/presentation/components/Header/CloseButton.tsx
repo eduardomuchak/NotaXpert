@@ -1,6 +1,7 @@
 import { Popover } from '@headlessui/react';
 import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
+
 import { focusStyles } from 'styles/focus';
 
 export function CloseButton() {

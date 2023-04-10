@@ -5,7 +5,7 @@ import { StatusTag } from '../StatusTag';
 
 export function StatusTab() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8 pr-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8 pr-0 md:pr-8">
       <LineInfo title={'Agente:'}>
         <span className="font-sanofiSansRegular text-2xl leading-8">
           Roberto Miranda

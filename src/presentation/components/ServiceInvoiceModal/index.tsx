@@ -7,6 +7,7 @@ import { focusStyles } from 'styles/focus';
 import { overlayStyle } from 'styles/overlay';
 
 import { StatusTab } from './tabs/StatusTab';
+import { HistoricTab } from './tabs/HistoricTab';
 
 export function ServiceInvoiceModal() {
   const [activeTab, setActiveTab] = useState('status');
@@ -20,7 +21,7 @@ export function ServiceInvoiceModal() {
     });
 
   return (
-    <Dialog.Root>
+    <Dialog.Root onOpenChange={() => setActiveTab('status')}>
       <Dialog.Trigger
         className={`relative h-14 w-14 rounded-2xl flex items-center justify-center cursor-pointer transition-all hover:bg-sanofiPurpleDark ${focusStyles}`}
       >
@@ -43,7 +44,7 @@ export function ServiceInvoiceModal() {
               onValueChange={(value: string) => setActiveTab(value)}
               defaultValue={'status'}
             >
-              <Tabs.List>
+              <Tabs.List className="mb-8 flex gap-2">
                 <Tabs.Trigger className={triggerStyle('status')} value="status">
                   <span className="px-3 py-1 font-sanofiSansRegular text-base leading-5 text-center flex items-center justify-center ">
                     Status
@@ -61,12 +62,16 @@ export function ServiceInvoiceModal() {
               <Tabs.Content value="status" defaultValue="status">
                 <StatusTab />
               </Tabs.Content>
-              <Tabs.Content value="historic"></Tabs.Content>
+              <Tabs.Content value="historic">
+                <HistoricTab />
+              </Tabs.Content>
             </Tabs.Root>
           </div>
           {/* Container direito */}
-          <div className="flex flex-col grow-[3] bg-emerald-500">
-            <Dialog.Description>Dados</Dialog.Description>
+          <div className="flex flex-col grow-[2] bg-sanofiGray rounded-[64px] p-8">
+            <Dialog.Description className="font-sanofiSansBold text-[42px]">
+              Dados
+            </Dialog.Description>
           </div>
         </Dialog.Content>
       </Dialog.Portal>

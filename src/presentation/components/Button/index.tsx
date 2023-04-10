@@ -10,7 +10,7 @@ export function Button({
   return (
     <button
       className={clsx(
-        'rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed',
+        'rounded-full transition-all disabled:hover:cursor-not-allowed',
         {
           'h-12 bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark ':
             variant === 'primary',
@@ -27,7 +27,7 @@ export function Button({
       <span
         className={clsx('', {
           'px-4': variant === 'primary' || variant === 'secondary',
-          'px-3 py-1 font-sanofiSansRegular text-base text-center flex items-center justify-center':
+          'px-3 py-1 font-sanofiSansRegular text-base leading-5 text-center flex items-center justify-center ':
             variant === 'small-primary' || variant === 'small-secondary',
         })}
       >

@@ -22,6 +22,8 @@ module.exports = {
         secondaryRed: '#CF483E',
         secondaryPink: '#BE006B',
         secondaryGreen: '#478040',
+        secondaryOrange: '#E06D2C',
+        secondaryYellow: '#CF903E',
       },
       boxShadow: {
         customShadow: '0px 0px 4px rgba(0, 0, 0, 0.25)',

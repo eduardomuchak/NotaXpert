@@ -8,6 +8,7 @@ import { useRouter } from 'next/router';
 
 import AlertIcon from 'assets/images/alert-icon.svg';
 import { focusStyles } from 'styles/focus';
+import { overlayStyle } from 'styles/overlay';
 
 export function LogoutModal() {
   const [open, setOpen] = useState(false);
@@ -36,7 +37,7 @@ export function LogoutModal() {
         <FiLogOut size={24} color={isHovering ? '#22004C' : '#F2E6FD'} />
       </AlertDialog.Trigger>
       <AlertDialog.Portal>
-        <AlertDialog.Overlay className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-md" />
+        <AlertDialog.Overlay className={`${overlayStyle}`} />
         {transitions((style, item) =>
           item ? (
             <animated.div style={style}>

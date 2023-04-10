@@ -10,17 +10,29 @@ export function Button({
   return (
     <button
       className={clsx(
-        'h-12 rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed',
+        'rounded-full font-sanofiSansRegular text-xl transition-all disabled:hover:cursor-not-allowed',
         {
-          'bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark':
+          'h-12 bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark ':
             variant === 'primary',
-          'text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark ':
+          ' h-12 text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark ':
             variant === 'secondary',
+          'bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark ':
+            variant === 'small-primary',
+          'text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark':
+            variant === 'small-secondary',
         },
       )}
       {...rest}
     >
-      <span className="px-4">{children}</span>
+      <span
+        className={clsx('', {
+          'px-4': variant === 'primary' || variant === 'secondary',
+          'px-3 py-1 font-sanofiSansRegular text-base text-center flex items-center justify-center':
+            variant === 'small-primary' || variant === 'small-secondary',
+        })}
+      >
+        {children}
+      </span>
     </button>
   );
 }

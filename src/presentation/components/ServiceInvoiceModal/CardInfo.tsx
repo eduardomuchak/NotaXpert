@@ -1,8 +1,15 @@
-import { MdComment } from 'react-icons/md';
+import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { ChangeEvent, useState } from 'react';
 
 import { Input } from '../Input';
 
 export function CardInfo() {
+  const [comment, setComment] = useState('');
+
+  const handleComment = (event: ChangeEvent<HTMLInputElement>) => {
+    setComment(event.target.value);
+  };
+
   return (
     <div className="flex items-center w-full pl-2">
       {/* Círculo */}
@@ -63,11 +70,19 @@ export function CardInfo() {
             </span>
           </div>
         </div>
-        <button className="bg-white text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark flex items-center justify-center w-fit rounded-full transition-all disabled:hover:cursor-not-allowed px-4 py-2 gap-[10px] text-xl">
+        {/* <button className="bg-white text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark flex items-center justify-center w-fit rounded-full transition-all disabled:hover:cursor-not-allowed px-4 py-2 gap-[10px] text-xl">
           <MdComment size={24} />
           <span>Ler Comentário</span>
-        </button>
-        <Input label="Comentário Teste" id="comentario" value={''} />
+        </button> */}
+        <div className="w-full max-w-xs">
+          <Input
+            label="Adicionar Comentário"
+            id="comentario"
+            value={comment}
+            icon={<AiOutlinePlusCircle size={28} color={'#22004C'} />}
+            onChange={(event) => handleComment(event)}
+          />
+        </div>
       </div>
     </div>
   );

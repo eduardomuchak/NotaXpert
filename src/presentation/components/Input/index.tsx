@@ -29,7 +29,7 @@ export function Input({
       <div
         id={`${id}-labelBackground`}
         className={clsx('absolute h-1 left-5 z-10', {
-          'bg-white translate-y-[-2px] translate-x-[14px] transition-all duration-300 transform':
+          'bg-white translate-y-[-2px] translate-x-[16px] transition-all duration-300 transform':
             isActive || value.length,
         })}
       />

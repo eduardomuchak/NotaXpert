@@ -3,6 +3,9 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { MdOutlineTimeline, MdTableChart } from 'react-icons/md';
 
+import { TimeLineTab } from './TimeLineTab';
+import { TableTab } from './TableTab';
+
 export function HistoricTab() {
   const [activeTab, setActiveTab] = useState('timeline');
 
@@ -45,10 +48,10 @@ export function HistoricTab() {
           </Tabs.Trigger>
         </Tabs.List>
         <Tabs.Content value="timeline">
-          <span>Teste 1</span>
+          <TimeLineTab />
         </Tabs.Content>
         <Tabs.Content value="table">
-          <span>Teste 2</span>
+          <TableTab />
         </Tabs.Content>
       </Tabs.Root>
     </div>

@@ -8,6 +8,7 @@ import { overlayStyle } from 'styles/overlay';
 
 import { StatusTab } from './tabs/StatusTab';
 import { HistoricTab } from './tabs/HistoricTab';
+import { DataContainer } from './DataContainer';
 
 export function ServiceInvoiceModal() {
   const [activeTab, setActiveTab] = useState('status');
@@ -68,11 +69,7 @@ export function ServiceInvoiceModal() {
             </Tabs.Root>
           </div>
           {/* Container direito */}
-          <div className="flex flex-col grow-[2] bg-sanofiGray rounded-[64px] p-8">
-            <Dialog.Description className="font-sanofiSansBold text-[42px]">
-              Dados
-            </Dialog.Description>
-          </div>
+          <DataContainer />
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>

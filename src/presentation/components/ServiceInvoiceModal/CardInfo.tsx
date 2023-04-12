@@ -2,15 +2,7 @@ import { CommentsSection } from './CommentsSection';
 
 export function CardInfo() {
   return (
-    <div className="flex items-center w-full pl-2">
-      {/* Círculo */}
-      {/* <div className="relative">
-        <div className="border border-black w-[30px]" />
-        <div className="absolute inset-0 m-auto mr-3 w-6 h-6 rounded-full border border-sanofiPurpleDark bg-white" />
-        <div className="absolute inset-0 m-auto mr-4 w-4 h-4 rounded-full bg-sanofiPurpleDark" />
-      </div> */}
-
-      {/* Card */}
+    <div className="flex items-center w-full">
       <div className="bg-sanofiGray border border-black rounded-[32px] p-4 flex flex-col gap-4 w-full">
         <span className="font-sanofiSansRegular text-base leading-5">
           12/01/2023 - 15:25:23 até 12/01/2023 - 15:26:43

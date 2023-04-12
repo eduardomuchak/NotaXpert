@@ -1,3 +1,23 @@
 {
-  "conventionalCommits.scopes": ["wip"]
+  "conventionalCommits.scopes": ["wip"],
+  "workbench.colorCustomizations": {
+    "activityBar.activeBackground": "#39007f",
+    "activityBar.background": "#39007f",
+    "activityBar.foreground": "#e7e7e7",
+    "activityBar.inactiveForeground": "#e7e7e799",
+    "activityBarBadge.background": "#9f4800",
+    "activityBarBadge.foreground": "#e7e7e7",
+    "commandCenter.border": "#e7e7e799",
+    "sash.hoverBorder": "#39007f",
+    "statusBar.background": "#22004c",
+    "statusBar.foreground": "#e7e7e7",
+    "statusBarItem.hoverBackground": "#39007f",
+    "statusBarItem.remoteBackground": "#22004c",
+    "statusBarItem.remoteForeground": "#e7e7e7",
+    "titleBar.activeBackground": "#22004c",
+    "titleBar.activeForeground": "#e7e7e7",
+    "titleBar.inactiveBackground": "#22004c99",
+    "titleBar.inactiveForeground": "#e7e7e799"
+  },
+  "peacock.remoteColor": "#22004C"
 }

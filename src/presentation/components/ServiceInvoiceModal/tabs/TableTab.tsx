@@ -127,11 +127,11 @@ export function TableTab() {
     'Status do doc',
   ];
 
-  const footer = ['Footer'];
+  // const footer = ['Footer'];
 
   return (
     <div className="flex flex-col gap-14 h-[520px] overflow-auto w-full max-w-[668px]">
-      <Table header={header} footer={footer}>
+      <Table header={header}>
         <Body />
       </Table>
     </div>

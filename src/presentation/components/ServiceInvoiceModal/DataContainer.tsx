@@ -7,6 +7,7 @@ const data = {
   tipo: 'NF',
   ag: '0001',
   banco: 'BANCO DO BRASIL',
+  contaBancaria: '20651684651320-00',
   codigo: '05165130',
   destinatario: 'Sanofi Medley Farm',
 };
@@ -30,6 +31,10 @@ export function DataContainer() {
             title="Banco"
             number={data.ag}
             text={data.banco}
+          />
+          <DataContainerSection
+            title="Conta bancária"
+            number={data.contaBancaria}
           />
         </div>
         <LineDivider />

@@ -60,9 +60,8 @@ export function CardInfo() {
               Juliana Silva Ferreira
             </span>
           </div>
-          <div className="flex flex-col gap-6">
-            <CommentsSection />
-          </div>
+
+          <CommentsSection />
         </div>
       </div>
     </div>

@@ -8,7 +8,6 @@ import { Button } from '../Button';
 
 export function CommentsSection() {
   const [open, setOpen] = useState(false);
-
   const [comment, setComment] = useState('');
 
   const handleComment = (event: ChangeEvent<HTMLInputElement>) => {
@@ -39,7 +38,7 @@ export function CommentsSection() {
             Registro SAP document. check
           </span>
         </div>
-        <div className="w-full max-w-xs flex flex-col gap-4">
+        <div className="w-[98%] max-w-xs flex flex-col gap-4 self-center">
           <TextArea
             label="Adicionar Comentário"
             id="comentario"

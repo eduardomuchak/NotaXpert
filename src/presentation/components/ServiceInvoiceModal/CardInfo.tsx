@@ -79,8 +79,8 @@ export function CardInfo() {
             />
             <div className="w-1/2">
               <Button
-                variant="primary"
-                icon={<AiOutlinePlusCircle size={28} color={'#FFF'} />}
+                variant="small-primary"
+                icon={<AiOutlinePlusCircle size={24} color={'#FFF'} />}
               >
                 Adicionar
               </Button>

@@ -13,8 +13,8 @@ const data = {
 
 export function DataContainer() {
   return (
-    <div className="flex max-w-[516px] max-h-[650px] grow-[2] bg-sanofiGray rounded-[64px] p-8">
-      <div className="flex flex-col overflow-y-scroll p-4">
+    <div className="flex w-full max-w-[516px] bg-sanofiGray rounded-[64px] p-8">
+      <div className="flex flex-col overflow-y-auto p-4">
         <span className="font-sanofiSansBold text-[42px]">Dados Básicos</span>
         <LineDivider />
         <span className="font-sanofiSansBold text-[32px]">

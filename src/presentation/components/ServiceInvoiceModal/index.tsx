@@ -30,7 +30,7 @@ export function ServiceInvoiceModal() {
       </Dialog.Trigger>
       <Dialog.Portal>
         <Dialog.Overlay className={`${overlayStyle}`} />
-        <Dialog.Content className="fixed inset-0 m-auto h-fit flex bg-white rounded-[64px] shadow-lg p-8 w-full max-w-[1280px] flex-col gap-8 md:flex-row md:gap-0">
+        <Dialog.Content className="fixed inset-0 m-auto h-auto md:h-fit overflow-auto flex bg-white rounded-[32px] md:rounded-[64px] shadow-lg p-6 md:p-8 w-full max-w-[1280px] flex-col gap-8 md:flex-row md:gap-0">
           {/* Container esquerdo */}
           <div className="flex flex-col grow-[2] gap-4">
             <div className="flex flex-col">

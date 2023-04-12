@@ -4,6 +4,7 @@ import { useRouter } from 'next/router';
 import { Header } from 'presentation/components/Header';
 
 import 'styles/globals.css';
+import 'styles/animations/RadixCollapsible.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   const headlessRoutes = ['/login', '/recuperar-senha', '/redefinir-senha'];

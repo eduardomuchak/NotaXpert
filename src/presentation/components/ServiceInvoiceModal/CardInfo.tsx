@@ -1,16 +1,6 @@
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { ChangeEvent, useState } from 'react';
-
-import { TextArea } from '../TextArea';
-import { Button } from '../Button';
+import { CommentsSection } from './CommentsSection';
 
 export function CardInfo() {
-  const [comment, setComment] = useState('');
-
-  const handleComment = (event: ChangeEvent<HTMLInputElement>) => {
-    setComment(event.target.value);
-  };
-
   return (
     <div className="flex items-center w-full pl-2">
       {/* Círculo */}
@@ -70,27 +60,10 @@ export function CardInfo() {
               Juliana Silva Ferreira
             </span>
           </div>
-          <div className="w-full max-w-xs flex flex-col gap-4">
-            <TextArea
-              label="Adicionar Comentário"
-              id="comentario"
-              value={comment}
-              onChange={(event) => handleComment(event)}
-            />
-            <div className="w-1/2">
-              <Button
-                variant="small-primary"
-                icon={<AiOutlinePlusCircle size={24} color={'#FFF'} />}
-              >
-                Adicionar
-              </Button>
-            </div>
+          <div className="flex flex-col gap-6">
+            <CommentsSection />
           </div>
         </div>
-        {/* <button className="bg-white text-sanofiPurpleDark border-2 border-sanofiPurpleDark hover:bg-sanofiPurpleDark hover:text-white disabled:bg-sanofiGray disabled:text-sanofiPurpleDark flex items-center justify-center w-fit rounded-full transition-all disabled:hover:cursor-not-allowed px-4 py-2 gap-[10px] text-xl">
-          <MdComment size={24} />
-          <span>Ler Comentário</span>
-        </button> */}
       </div>
     </div>
   );

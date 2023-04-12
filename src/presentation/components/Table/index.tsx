@@ -15,7 +15,7 @@ export function Table({ header, children, footer }: CustomTable.TableProps) {
         <tr>
           {header.map((item, index) => (
             <th
-              className="px-4 py-2 text-left font-sanofiSansBold text-white bg-sanofiPurpleDark border-2 border-white"
+              className="px-4 py-2 text-left font-sanofiSansBold text-white bg-sanofiPurpleDark border-2 border-white whitespace-nowrap"
               key={`${item}-${index}`}
             >
               {item}

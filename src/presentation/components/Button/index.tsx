@@ -5,12 +5,13 @@ import { CustomButton } from './interface';
 export function Button({
   children,
   variant,
+  icon,
   ...rest
 }: CustomButton.ButtonProps) {
   return (
     <button
       className={clsx(
-        'rounded-full transition-all disabled:hover:cursor-not-allowed',
+        'rounded-full transition-all disabled:hover:cursor-not-allowed relative',
         {
           'h-12 bg-sanofiPurpleDark text-white hover:bg-sanofiPurple disabled:opacity-80 disabled:hover:bg-sanofiPurpleDark ':
             variant === 'primary',
@@ -29,9 +30,11 @@ export function Button({
           'px-4': variant === 'primary' || variant === 'secondary',
           'px-3 py-1 font-sanofiSansRegular text-base leading-5 text-center flex items-center justify-center ':
             variant === 'small-primary' || variant === 'small-secondary',
+          'flex items-center justify-center gap-2': icon,
         })}
       >
         {children}
+        {icon ? icon : null}
       </span>
     </button>
   );

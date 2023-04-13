@@ -5,6 +5,7 @@ import { Header } from 'presentation/components/Header';
 
 import 'styles/globals.css';
 import 'styles/animations/RadixCollapsible.css';
+import 'styles/animations/RadixDropdownMenu.css';
 
 export default function App({ Component, pageProps }: AppProps) {
   const headlessRoutes = ['/login', '/recuperar-senha', '/redefinir-senha'];

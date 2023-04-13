@@ -8,6 +8,7 @@ export function Input({
   id,
   value,
   icon,
+  height,
   ...rest
 }: CustomInput.InputProps) {
   const [isActive, setIsActive] = useState(false);
@@ -58,6 +59,13 @@ export function Input({
         onFocus={() => setIsActive(true)}
         onBlur={() => setIsActive(false)}
         autoFocus
+        style={
+          height
+            ? { height }
+            : {
+                height: '56px',
+              }
+        }
         {...rest}
       />
       {icon ? (

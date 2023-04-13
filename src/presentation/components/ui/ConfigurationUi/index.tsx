@@ -1,4 +1,4 @@
-import { AiOutlinePlusCircle } from 'react-icons/ai';
+import { AiFillPrinter, AiOutlinePlusCircle } from 'react-icons/ai';
 import { MdSearch } from 'react-icons/md';
 
 import { Button } from 'presentation/components/Button';
@@ -31,19 +31,36 @@ export function ConfigurationUi() {
           <span className="text-2xl">Cadastrar Usuário</span>
         </Button>
       </div>
-      <div className="flex gap-4">
-        <Input
-          label="Nome"
-          id="name"
-          value=""
-          icon={<MdSearch size={24} color={'#808080'} />}
-        />
-        <CheckboxDropdown
-          id="userRole"
-          label="Cargo do Usuário"
-          options={userRoles}
-        />
-        <CheckboxDropdown id="userTeam" label="Time" options={userTeams} />
+      <div className="flex flex-row items-center justify-between mt-8">
+        <div className="flex gap-4 w-full">
+          <div className="w-full max-w-[215px]">
+            <Input
+              label="Nome"
+              id="name"
+              value=""
+              icon={<MdSearch size={24} color={'#808080'} />}
+            />
+          </div>
+          <div className="w-full max-w-[200px]">
+            <CheckboxDropdown
+              id="userRole"
+              label="Cargo do Usuário"
+              options={userRoles}
+            />
+          </div>
+          <div className="w-full max-w-[150px]">
+            <CheckboxDropdown id="userTeam" label="Time" options={userTeams} />
+          </div>
+        </div>
+        <Button variant="secondary" icon={<AiFillPrinter size={24} />}>
+          <span className="text-xl leading-6 font-sanofiSansRegular">
+            Exportar
+          </span>
+        </Button>
+      </div>
+      <div className="bg-sanofiGray p-4 rounded-2xl md:p-8 grid grid-cols-1 md:grid-cols-2 grid-flow-row gap-8 mt-8">
+        <span className="font-sanofiSansBold text-base leading-5">Usuário</span>
+        <span className="font-sanofiSansBold text-base leading-5">Contato</span>
       </div>
     </PageContainer>
   );

@@ -8,7 +8,7 @@ export namespace CustomButton {
     | 'small-secondary';
 
   export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-    children: string;
+    children: string | ReactNode;
     variant: variant;
     icon?: ReactNode;
   }
